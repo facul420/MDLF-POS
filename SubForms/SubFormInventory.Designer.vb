@@ -59,7 +59,7 @@ Partial Class SubFormInventory
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.prodCode, Me.prodType, Me.prodName, Me.prodPrice, Me.prodSpecialDiscount, Me.itemsLeft})
-        Me.DataGridView1.Location = New System.Drawing.Point(273, 12)
+        Me.DataGridView1.Location = New System.Drawing.Point(397, 77)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -114,7 +114,7 @@ Partial Class SubFormInventory
         Me.Label8.AutoSize = True
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Bahnschrift Condensed", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(10, 14)
+        Me.Label8.Location = New System.Drawing.Point(134, 79)
         Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(141, 23)
@@ -124,7 +124,7 @@ Partial Class SubFormInventory
         'ProdCodeTextBox
         '
         Me.ProdCodeTextBox.Font = New System.Drawing.Font("Bahnschrift Condensed", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ProdCodeTextBox.Location = New System.Drawing.Point(11, 39)
+        Me.ProdCodeTextBox.Location = New System.Drawing.Point(135, 104)
         Me.ProdCodeTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.ProdCodeTextBox.Name = "ProdCodeTextBox"
         Me.ProdCodeTextBox.Size = New System.Drawing.Size(257, 30)
@@ -150,7 +150,7 @@ Partial Class SubFormInventory
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.TextBox1)
-        Me.Panel1.Location = New System.Drawing.Point(11, 74)
+        Me.Panel1.Location = New System.Drawing.Point(135, 139)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(256, 364)
         Me.Panel1.TabIndex = 6
@@ -350,7 +350,7 @@ Partial Class SubFormInventory
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(146, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(1114, 637)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.ProdCodeTextBox)

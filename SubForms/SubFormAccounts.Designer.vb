@@ -30,6 +30,8 @@ Partial Class SubFormAccounts
         Me.PassAcc = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DateOfEmployment = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.cmbPosAcc = New System.Windows.Forms.ComboBox()
         Me.txtDeleteAcc = New System.Windows.Forms.Button()
         Me.btnSaveAcc = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -44,8 +46,6 @@ Partial Class SubFormAccounts
         Me.txtNameAcc = New System.Windows.Forms.TextBox()
         Me.IdPicBoxAcc = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.cmbPosAcc = New System.Windows.Forms.ComboBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         CType(Me.AccountsDataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.IdPicBoxAcc, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -56,10 +56,10 @@ Partial Class SubFormAccounts
         Me.AccountsDataGrid.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
         Me.AccountsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.AccountsDataGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdAccounts, Me.NameAcc, Me.PositionAcc, Me.UserAcc, Me.PassAcc, Me.DateOfEmployment})
-        Me.AccountsDataGrid.Location = New System.Drawing.Point(431, 22)
+        Me.AccountsDataGrid.Location = New System.Drawing.Point(431, 1)
         Me.AccountsDataGrid.Name = "AccountsDataGrid"
         Me.AccountsDataGrid.RowHeadersVisible = False
-        Me.AccountsDataGrid.Size = New System.Drawing.Size(671, 575)
+        Me.AccountsDataGrid.Size = New System.Drawing.Size(684, 636)
         Me.AccountsDataGrid.TabIndex = 2
         '
         'IdAccounts
@@ -122,6 +122,28 @@ Partial Class SubFormAccounts
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(413, 418)
         Me.Panel1.TabIndex = 7
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.BackColor = System.Drawing.Color.Transparent
+        Me.CheckBox1.Font = New System.Drawing.Font("Bahnschrift Condensed", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.CheckBox1.Location = New System.Drawing.Point(136, 197)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(129, 27)
+        Me.CheckBox1.TabIndex = 30
+        Me.CheckBox1.Text = "Show Password"
+        Me.CheckBox1.UseVisualStyleBackColor = False
+        '
+        'cmbPosAcc
+        '
+        Me.cmbPosAcc.Font = New System.Drawing.Font("Bahnschrift Condensed", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.cmbPosAcc.FormattingEnabled = True
+        Me.cmbPosAcc.Items.AddRange(New Object() {"Admin", "Cashier"})
+        Me.cmbPosAcc.Location = New System.Drawing.Point(10, 85)
+        Me.cmbPosAcc.Name = "cmbPosAcc"
+        Me.cmbPosAcc.Size = New System.Drawing.Size(164, 27)
+        Me.cmbPosAcc.TabIndex = 29
         '
         'txtDeleteAcc
         '
@@ -266,7 +288,7 @@ Partial Class SubFormAccounts
         'IdPicBoxAcc
         '
         Me.IdPicBoxAcc.ImageRotate = 0!
-        Me.IdPicBoxAcc.Location = New System.Drawing.Point(147, 22)
+        Me.IdPicBoxAcc.Location = New System.Drawing.Point(157, 12)
         Me.IdPicBoxAcc.Name = "IdPicBoxAcc"
         Me.IdPicBoxAcc.Size = New System.Drawing.Size(150, 150)
         Me.IdPicBoxAcc.TabIndex = 8
@@ -275,7 +297,7 @@ Partial Class SubFormAccounts
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.BackColor = System.Drawing.Color.SkyBlue
         Me.Label1.Font = New System.Drawing.Font("Bahnschrift Condensed", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(12, 62)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
@@ -283,28 +305,6 @@ Partial Class SubFormAccounts
         Me.Label1.Size = New System.Drawing.Size(130, 39)
         Me.Label1.TabIndex = 29
         Me.Label1.Text = "ID Picture :"
-        '
-        'cmbPosAcc
-        '
-        Me.cmbPosAcc.Font = New System.Drawing.Font("Bahnschrift Condensed", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.cmbPosAcc.FormattingEnabled = True
-        Me.cmbPosAcc.Items.AddRange(New Object() {"Admin", "Cashier"})
-        Me.cmbPosAcc.Location = New System.Drawing.Point(10, 85)
-        Me.cmbPosAcc.Name = "cmbPosAcc"
-        Me.cmbPosAcc.Size = New System.Drawing.Size(164, 27)
-        Me.cmbPosAcc.TabIndex = 29
-        '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.BackColor = System.Drawing.Color.Transparent
-        Me.CheckBox1.Font = New System.Drawing.Font("Bahnschrift Condensed", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.CheckBox1.Location = New System.Drawing.Point(136, 197)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(129, 27)
-        Me.CheckBox1.TabIndex = 30
-        Me.CheckBox1.Text = "Show Password"
-        Me.CheckBox1.UseVisualStyleBackColor = False
         '
         'SubFormAccounts
         '

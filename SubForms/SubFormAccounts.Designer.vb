@@ -332,7 +332,7 @@ Partial Class SubFormAccounts
         Me.btnSearchId.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
         Me.btnSearchId.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSearchId.Font = New System.Drawing.Font("Bahnschrift Condensed", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSearchId.Location = New System.Drawing.Point(300, 81)
+        Me.btnSearchId.Location = New System.Drawing.Point(288, 92)
         Me.btnSearchId.Name = "btnSearchId"
         Me.btnSearchId.Size = New System.Drawing.Size(96, 35)
         Me.btnSearchId.TabIndex = 21
@@ -342,7 +342,7 @@ Partial Class SubFormAccounts
         'txtIdSearch
         '
         Me.txtIdSearch.Font = New System.Drawing.Font("Bahnschrift Condensed", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtIdSearch.Location = New System.Drawing.Point(281, 45)
+        Me.txtIdSearch.Location = New System.Drawing.Point(276, 60)
         Me.txtIdSearch.Margin = New System.Windows.Forms.Padding(2)
         Me.txtIdSearch.Name = "txtIdSearch"
         Me.txtIdSearch.Size = New System.Drawing.Size(128, 27)

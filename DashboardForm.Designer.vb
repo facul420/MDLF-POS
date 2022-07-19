@@ -125,7 +125,7 @@ Partial Class DashboardForm
         Me.btnAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAccount.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAccount.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnAccount.IconChar = FontAwesome.Sharp.IconChar.IdCard
+        Me.btnAccount.IconChar = FontAwesome.Sharp.IconChar.DriversLicense
         Me.btnAccount.IconColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnAccount.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnAccount.IconSize = 32

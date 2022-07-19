@@ -165,6 +165,18 @@ Public Class DashboardForm
 
     End Sub
 
+    Private Sub panelDesktop_Paint(sender As Object, e As PaintEventArgs) Handles panelDesktop.Paint
+
+    End Sub
+
+    Private Sub ShapeContainer2_Load(sender As Object, e As EventArgs) Handles ShapeContainer2.Load
+
+    End Sub
+
+    Private Sub LogoPanel_Paint(sender As Object, e As PaintEventArgs) Handles LogoPanel.Paint
+
+    End Sub
+
 
 
 

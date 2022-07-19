@@ -24,6 +24,9 @@ Partial Class LoginForm
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LoginForm))
         Me.pnlTitleBar = New System.Windows.Forms.Panel()
+        Me.btnMinimize = New System.Windows.Forms.Button()
+        Me.btnMaximize = New System.Windows.Forms.Button()
+        Me.btnExit = New System.Windows.Forms.Button()
         Me.cmbCredentials = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -33,9 +36,6 @@ Partial Class LoginForm
         Me.btnLogin = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.txtPassword = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtUserName = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.btnMinimize = New System.Windows.Forms.Button()
-        Me.btnMaximize = New System.Windows.Forms.Button()
-        Me.btnExit = New System.Windows.Forms.Button()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.OvalShape1 = New Microsoft.VisualBasic.PowerPacks.OvalShape()
         Me.pnlTitleBar.SuspendLayout()
@@ -54,6 +54,51 @@ Partial Class LoginForm
         Me.pnlTitleBar.Name = "pnlTitleBar"
         Me.pnlTitleBar.Size = New System.Drawing.Size(478, 50)
         Me.pnlTitleBar.TabIndex = 0
+        '
+        'btnMinimize
+        '
+        Me.btnMinimize.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnMinimize.BackColor = System.Drawing.Color.Transparent
+        Me.btnMinimize.BackgroundImage = Global.MDLF_POS.My.Resources.Resources.icons8_subtract_50
+        Me.btnMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnMinimize.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnMinimize.Location = New System.Drawing.Point(388, 12)
+        Me.btnMinimize.Name = "btnMinimize"
+        Me.btnMinimize.Size = New System.Drawing.Size(25, 22)
+        Me.btnMinimize.TabIndex = 3
+        Me.btnMinimize.TabStop = False
+        Me.btnMinimize.UseVisualStyleBackColor = False
+        '
+        'btnMaximize
+        '
+        Me.btnMaximize.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnMaximize.BackColor = System.Drawing.Color.Transparent
+        Me.btnMaximize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnMaximize.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnMaximize.Image = Global.MDLF_POS.My.Resources.Resources.icons8_maximize_49
+        Me.btnMaximize.Location = New System.Drawing.Point(415, 12)
+        Me.btnMaximize.Name = "btnMaximize"
+        Me.btnMaximize.Size = New System.Drawing.Size(25, 22)
+        Me.btnMaximize.TabIndex = 4
+        Me.btnMaximize.TabStop = False
+        Me.btnMaximize.UseVisualStyleBackColor = False
+        '
+        'btnExit
+        '
+        Me.btnExit.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnExit.BackColor = System.Drawing.Color.Transparent
+        Me.btnExit.BackgroundImage = Global.MDLF_POS.My.Resources.Resources.icons8_close_501
+        Me.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnExit.Location = New System.Drawing.Point(441, 12)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(25, 22)
+        Me.btnExit.TabIndex = 0
+        Me.btnExit.TabStop = False
+        Me.btnExit.UseVisualStyleBackColor = False
         '
         'cmbCredentials
         '
@@ -214,51 +259,6 @@ Partial Class LoginForm
         Me.txtUserName.Size = New System.Drawing.Size(196, 34)
         Me.txtUserName.TabIndex = 1
         '
-        'btnMinimize
-        '
-        Me.btnMinimize.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnMinimize.BackColor = System.Drawing.Color.Transparent
-        Me.btnMinimize.BackgroundImage = Global.MDLF_POS.My.Resources.Resources.icons8_subtract_50
-        Me.btnMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnMinimize.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMinimize.Location = New System.Drawing.Point(388, 12)
-        Me.btnMinimize.Name = "btnMinimize"
-        Me.btnMinimize.Size = New System.Drawing.Size(25, 22)
-        Me.btnMinimize.TabIndex = 3
-        Me.btnMinimize.TabStop = False
-        Me.btnMinimize.UseVisualStyleBackColor = False
-        '
-        'btnMaximize
-        '
-        Me.btnMaximize.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnMaximize.BackColor = System.Drawing.Color.Transparent
-        Me.btnMaximize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnMaximize.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMaximize.Image = Global.MDLF_POS.My.Resources.Resources.icons8_maximize_49
-        Me.btnMaximize.Location = New System.Drawing.Point(415, 12)
-        Me.btnMaximize.Name = "btnMaximize"
-        Me.btnMaximize.Size = New System.Drawing.Size(25, 22)
-        Me.btnMaximize.TabIndex = 4
-        Me.btnMaximize.TabStop = False
-        Me.btnMaximize.UseVisualStyleBackColor = False
-        '
-        'btnExit
-        '
-        Me.btnExit.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnExit.BackColor = System.Drawing.Color.Transparent
-        Me.btnExit.BackgroundImage = Global.MDLF_POS.My.Resources.Resources.icons8_close_501
-        Me.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnExit.Location = New System.Drawing.Point(441, 12)
-        Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(25, 22)
-        Me.btnExit.TabIndex = 0
-        Me.btnExit.TabStop = False
-        Me.btnExit.UseVisualStyleBackColor = False
-        '
         'ShapeContainer1
         '
         Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
@@ -312,7 +312,6 @@ Partial Class LoginForm
     Friend WithEvents btnExit As Button
     Friend WithEvents txtUserName As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents cmbCredentials As Guna.UI2.WinForms.Guna2ComboBox
-    Friend WithEvents txtPassword As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents CheckBox1 As CheckBox
@@ -321,4 +320,5 @@ Partial Class LoginForm
     Friend WithEvents btnLogin As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
     Friend WithEvents OvalShape1 As Microsoft.VisualBasic.PowerPacks.OvalShape
+    Friend WithEvents txtPassword As Guna.UI2.WinForms.Guna2TextBox
 End Class

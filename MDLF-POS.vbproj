@@ -205,6 +205,7 @@
     <Compile Include="SecurityForm02.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SubForms\DatabaseModule.vb" />
     <Compile Include="SubForms\SubFormAccounts.Designer.vb">
       <DependentUpon>SubFormAccounts.vb</DependentUpon>
     </Compile>

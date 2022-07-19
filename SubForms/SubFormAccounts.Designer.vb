@@ -454,8 +454,8 @@ Partial Class SubFormAccounts
     Friend WithEvents DateButton As Button
     Friend WithEvents DateLabel As Label
 
-       
 
-    End Sub
+
+
 
 End Class

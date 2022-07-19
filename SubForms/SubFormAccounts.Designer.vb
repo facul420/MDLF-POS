@@ -22,6 +22,7 @@ Partial Class SubFormAccounts
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+
         Me.AccountsDataGrid = New System.Windows.Forms.DataGridView()
         Me.IdAccounts = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NameAcc = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -398,10 +399,12 @@ Partial Class SubFormAccounts
         Me.Panel2.Size = New System.Drawing.Size(413, 161)
         Me.Panel2.TabIndex = 30
         '
+
         'SubFormAccounts
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(146, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1114, 637)
         Me.Controls.Add(Me.Panel1)
@@ -450,4 +453,9 @@ Partial Class SubFormAccounts
     Friend WithEvents txtDate As MaskedTextBox
     Friend WithEvents DateButton As Button
     Friend WithEvents DateLabel As Label
+
+       
+
+    End Sub
+
 End Class

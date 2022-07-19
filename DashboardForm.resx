@@ -121,7 +121,7 @@
   <data name="btnAccount.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABisAAAODCAYAAADNTzKdAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAATpRJREFUeF7t3QWzbdt6VuH+S3C34O7B3d1dE9wluEM8ucTdiRFCiLu7J4S4u4cQ
+        wAAADsABataJCQAATpRJREFUeF7t3QWzbdt6VuH+S3C34O7B3d1dE9wluEM8ucTdiRFCiLu7J4S4u4cQ
         GIw++vjmmWOdd22qqL16T616Zt2222zfe/5Br7lu+6Gvv20/ZIeZmZmZmZmZmZmZmXmF2w99g/0LAAAA
         AAAAAADAIo5fVgAAAAAAAAAAAKyi/bDz1YKZmZmZmZmZmZmZmXmFx2PF659HZmZmZmZmZmZmZmbmyT4e
         KwAAAAAAAAAAAFbhsQIAAAAAAAAAACyl/fDzCzMzMzMzMzMzMzMz8wrffllRR6211lprrbXWWmuttdZa
@@ -462,7 +462,7 @@
   <data name="btnSales.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABisAAAODCAYAAADNTzKdAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAATpRJREFUeF7t3QWzbdt6VuH+S3C34O7B3d1dE9wluEM8ucTdiRFCiLu7J4S4u4cQ
+        wAAADsABataJCQAATpRJREFUeF7t3QWzbdt6VuH+S3C34O7B3d1dE9wluEM8ucTdiRFCiLu7J4S4u4cQ
         GIw++vjmmWOdd22qqL16T616Zt2222zfe/5Br7lu+6Gvv20/ZIeZmZmZmZmZmZmZmXmF2w99g/0LAAAA
         AAAAAADAIo5fVgAAAAAAAAAAAKyi/bDz1YKZmZmZmZmZmZmZmXmFx2PF659HZmZmZmZmZmZmZmbmyT4e
         KwAAAAAAAAAAAFbhsQIAAAAAAAAAACyl/fDzCzMzMzMzMzMzMzMz8wrffllRR6211lprrbXWWmuttdZa
@@ -803,7 +803,7 @@
   <data name="btnInventory.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABisAAAODCAYAAADNTzKdAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAATpRJREFUeF7t3QWzbdt6VuH+S3C34O7B3d1dE9wluEM8ucTdiRFCiLu7J4S4u4cQ
+        wAAADsABataJCQAATpRJREFUeF7t3QWzbdt6VuH+S3C34O7B3d1dE9wluEM8ucTdiRFCiLu7J4S4u4cQ
         GIw++vjmmWOdd22qqL16T616Zt2222zfe/5Br7lu+6Gvv20/ZIeZmZmZmZmZmZmZmXmF2w99g/0LAAAA
         AAAAAADAIo5fVgAAAAAAAAAAAKyi/bDz1YKZmZmZmZmZmZmZmXmFx2PF659HZmZmZmZmZmZmZmbmyT4e
         KwAAAAAAAAAAAFbhsQIAAAAAAAAAACyl/fDzCzMzMzMzMzMzMzMz8wrffllRR6211lprrbXWWmuttdZa

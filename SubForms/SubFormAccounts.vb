@@ -20,6 +20,7 @@ Public Class SubFormAccounts
         conn.Open()
     End Sub
 
+
     Private Sub btnBrowseId_Click(sender As Object, e As EventArgs) Handles btnBrowseId.Click
         Dim ofd As FileDialog = New OpenFileDialog()
 
@@ -156,4 +157,5 @@ Public Class SubFormAccounts
     Private Sub SubFormAccounts_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadDatabase()
     End Sub
+
 End Class

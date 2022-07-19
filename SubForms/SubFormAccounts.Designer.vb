@@ -30,7 +30,9 @@ Partial Class SubFormAccounts
         Me.PassAcc = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DateOfEmployment = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.DateButton = New System.Windows.Forms.Button()
+        Me.txtDate = New System.Windows.Forms.MaskedTextBox()
+        Me.AccShowPass = New System.Windows.Forms.CheckBox()
         Me.cmbPosAcc = New System.Windows.Forms.ComboBox()
         Me.txtDeleteAcc = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -40,6 +42,8 @@ Partial Class SubFormAccounts
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtUserAcc = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.DateLabel = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.btnAddAcc = New System.Windows.Forms.Button()
         Me.txtNameAcc = New System.Windows.Forms.TextBox()
@@ -48,9 +52,11 @@ Partial Class SubFormAccounts
         Me.IdPicBoxAcc = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnBrowseId = New System.Windows.Forms.Button()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         CType(Me.AccountsDataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.IdPicBoxAcc, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'AccountsDataGrid
@@ -58,10 +64,10 @@ Partial Class SubFormAccounts
         Me.AccountsDataGrid.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
         Me.AccountsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.AccountsDataGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdAccounts, Me.NameAcc, Me.PositionAcc, Me.UserAcc, Me.PassAcc, Me.DateOfEmployment})
-        Me.AccountsDataGrid.Location = New System.Drawing.Point(431, 22)
+        Me.AccountsDataGrid.Location = New System.Drawing.Point(431, 12)
         Me.AccountsDataGrid.Name = "AccountsDataGrid"
         Me.AccountsDataGrid.RowHeadersVisible = False
-        Me.AccountsDataGrid.Size = New System.Drawing.Size(671, 575)
+        Me.AccountsDataGrid.Size = New System.Drawing.Size(671, 613)
         Me.AccountsDataGrid.TabIndex = 2
         '
         'IdAccounts
@@ -106,7 +112,9 @@ Partial Class SubFormAccounts
         'Panel1
         '
         Me.Panel1.BackgroundImage = Global.MDLF_POS.My.Resources.Resources.newa
-        Me.Panel1.Controls.Add(Me.CheckBox1)
+        Me.Panel1.Controls.Add(Me.DateButton)
+        Me.Panel1.Controls.Add(Me.txtDate)
+        Me.Panel1.Controls.Add(Me.AccShowPass)
         Me.Panel1.Controls.Add(Me.cmbPosAcc)
         Me.Panel1.Controls.Add(Me.txtDeleteAcc)
         Me.Panel1.Controls.Add(Me.Label5)
@@ -116,25 +124,46 @@ Partial Class SubFormAccounts
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.txtUserAcc)
         Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.DateLabel)
+        Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Controls.Add(Me.Label8)
         Me.Panel1.Controls.Add(Me.btnAddAcc)
         Me.Panel1.Controls.Add(Me.txtNameAcc)
-        Me.Panel1.Location = New System.Drawing.Point(12, 179)
+        Me.Panel1.Location = New System.Drawing.Point(13, 179)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(413, 418)
+        Me.Panel1.Size = New System.Drawing.Size(413, 446)
         Me.Panel1.TabIndex = 7
         '
-        'CheckBox1
+        'DateButton
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.BackColor = System.Drawing.Color.Transparent
-        Me.CheckBox1.Font = New System.Drawing.Font("Bahnschrift Condensed", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.CheckBox1.Location = New System.Drawing.Point(136, 197)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(129, 27)
-        Me.CheckBox1.TabIndex = 30
-        Me.CheckBox1.Text = "Show Password"
-        Me.CheckBox1.UseVisualStyleBackColor = False
+        Me.DateButton.Location = New System.Drawing.Point(272, 101)
+        Me.DateButton.Name = "DateButton"
+        Me.DateButton.Size = New System.Drawing.Size(75, 23)
+        Me.DateButton.TabIndex = 32
+        Me.DateButton.Text = "Show"
+        Me.DateButton.UseVisualStyleBackColor = True
+        '
+        'txtDate
+        '
+        Me.txtDate.Font = New System.Drawing.Font("Bahnschrift Condensed", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.txtDate.Location = New System.Drawing.Point(254, 31)
+        Me.txtDate.Mask = "00/00/0000"
+        Me.txtDate.Name = "txtDate"
+        Me.txtDate.Size = New System.Drawing.Size(122, 27)
+        Me.txtDate.TabIndex = 31
+        Me.txtDate.ValidatingType = GetType(Date)
+        '
+        'AccShowPass
+        '
+        Me.AccShowPass.AutoSize = True
+        Me.AccShowPass.BackColor = System.Drawing.Color.Transparent
+        Me.AccShowPass.Font = New System.Drawing.Font("Bahnschrift Condensed", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.AccShowPass.Location = New System.Drawing.Point(136, 197)
+        Me.AccShowPass.Name = "AccShowPass"
+        Me.AccShowPass.Size = New System.Drawing.Size(129, 27)
+        Me.AccShowPass.TabIndex = 30
+        Me.AccShowPass.Text = "Show Password"
+        Me.AccShowPass.UseVisualStyleBackColor = False
         '
         'cmbPosAcc
         '
@@ -145,6 +174,7 @@ Partial Class SubFormAccounts
         Me.cmbPosAcc.Name = "cmbPosAcc"
         Me.cmbPosAcc.Size = New System.Drawing.Size(164, 27)
         Me.cmbPosAcc.TabIndex = 29
+        Me.cmbPosAcc.Text = "Cashier"
         '
         'txtDeleteAcc
         '
@@ -153,7 +183,7 @@ Partial Class SubFormAccounts
         Me.txtDeleteAcc.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
         Me.txtDeleteAcc.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.txtDeleteAcc.Font = New System.Drawing.Font("Bahnschrift Condensed", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDeleteAcc.Location = New System.Drawing.Point(12, 347)
+        Me.txtDeleteAcc.Location = New System.Drawing.Point(12, 357)
         Me.txtDeleteAcc.Name = "txtDeleteAcc"
         Me.txtDeleteAcc.Size = New System.Drawing.Size(128, 35)
         Me.txtDeleteAcc.TabIndex = 22
@@ -200,9 +230,9 @@ Partial Class SubFormAccounts
         Me.txtPassAcc.Location = New System.Drawing.Point(9, 197)
         Me.txtPassAcc.Margin = New System.Windows.Forms.Padding(2)
         Me.txtPassAcc.Name = "txtPassAcc"
-        Me.txtPassAcc.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPassAcc.Size = New System.Drawing.Size(113, 27)
         Me.txtPassAcc.TabIndex = 18
+        Me.txtPassAcc.UseSystemPasswordChar = True
         '
         'Label3
         '
@@ -237,6 +267,30 @@ Partial Class SubFormAccounts
         Me.Label2.TabIndex = 13
         Me.Label2.Text = "Position"
         '
+        'DateLabel
+        '
+        Me.DateLabel.AutoSize = True
+        Me.DateLabel.BackColor = System.Drawing.Color.Transparent
+        Me.DateLabel.Font = New System.Drawing.Font("Bahnschrift Condensed", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateLabel.Location = New System.Drawing.Point(250, 75)
+        Me.DateLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.DateLabel.Name = "DateLabel"
+        Me.DateLabel.Size = New System.Drawing.Size(135, 23)
+        Me.DateLabel.TabIndex = 11
+        Me.DateLabel.Text = "Date of Employment"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Font = New System.Drawing.Font("Bahnschrift Condensed", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(250, 5)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(135, 23)
+        Me.Label6.TabIndex = 11
+        Me.Label6.Text = "Date of Employment"
+        '
         'Label8
         '
         Me.Label8.AutoSize = True
@@ -256,7 +310,7 @@ Partial Class SubFormAccounts
         Me.btnAddAcc.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
         Me.btnAddAcc.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAddAcc.Font = New System.Drawing.Font("Bahnschrift Condensed", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAddAcc.Location = New System.Drawing.Point(12, 306)
+        Me.btnAddAcc.Location = New System.Drawing.Point(12, 307)
         Me.btnAddAcc.Name = "btnAddAcc"
         Me.btnAddAcc.Size = New System.Drawing.Size(128, 35)
         Me.btnAddAcc.TabIndex = 11
@@ -274,12 +328,11 @@ Partial Class SubFormAccounts
         '
         'btnSearchId
         '
-        Me.btnSearchId.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.btnSearchId.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.btnSearchId.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.btnSearchId.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
         Me.btnSearchId.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSearchId.Font = New System.Drawing.Font("Bahnschrift Condensed", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSearchId.Location = New System.Drawing.Point(314, 94)
+        Me.btnSearchId.Location = New System.Drawing.Point(300, 81)
         Me.btnSearchId.Name = "btnSearchId"
         Me.btnSearchId.Size = New System.Drawing.Size(96, 35)
         Me.btnSearchId.TabIndex = 21
@@ -289,7 +342,7 @@ Partial Class SubFormAccounts
         'txtIdSearch
         '
         Me.txtIdSearch.Font = New System.Drawing.Font("Bahnschrift Condensed", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtIdSearch.Location = New System.Drawing.Point(298, 62)
+        Me.txtIdSearch.Location = New System.Drawing.Point(281, 47)
         Me.txtIdSearch.Margin = New System.Windows.Forms.Padding(2)
         Me.txtIdSearch.Name = "txtIdSearch"
         Me.txtIdSearch.Size = New System.Drawing.Size(128, 27)
@@ -297,8 +350,9 @@ Partial Class SubFormAccounts
         '
         'IdPicBoxAcc
         '
+        Me.IdPicBoxAcc.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.IdPicBoxAcc.ImageRotate = 0!
-        Me.IdPicBoxAcc.Location = New System.Drawing.Point(140, 22)
+        Me.IdPicBoxAcc.Location = New System.Drawing.Point(118, 3)
         Me.IdPicBoxAcc.Name = "IdPicBoxAcc"
         Me.IdPicBoxAcc.Size = New System.Drawing.Size(150, 150)
         Me.IdPicBoxAcc.TabIndex = 8
@@ -308,27 +362,41 @@ Partial Class SubFormAccounts
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Bahnschrift Condensed", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(5, 62)
+        Me.Label1.Font = New System.Drawing.Font("Bahnschrift Condensed", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(10, 45)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(130, 39)
+        Me.Label1.Size = New System.Drawing.Size(99, 29)
         Me.Label1.TabIndex = 29
         Me.Label1.Text = "ID Picture :"
         '
         'btnBrowseId
         '
         Me.btnBrowseId.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.btnBrowseId.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.btnBrowseId.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.btnBrowseId.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
         Me.btnBrowseId.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBrowseId.Font = New System.Drawing.Font("Bahnschrift Condensed", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBrowseId.Location = New System.Drawing.Point(21, 104)
+        Me.btnBrowseId.Location = New System.Drawing.Point(11, 81)
         Me.btnBrowseId.Name = "btnBrowseId"
         Me.btnBrowseId.Size = New System.Drawing.Size(96, 35)
         Me.btnBrowseId.TabIndex = 21
         Me.btnBrowseId.Text = "Browse"
         Me.btnBrowseId.UseVisualStyleBackColor = False
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.Transparent
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.Label1)
+        Me.Panel2.Controls.Add(Me.btnSearchId)
+        Me.Panel2.Controls.Add(Me.btnBrowseId)
+        Me.Panel2.Controls.Add(Me.IdPicBoxAcc)
+        Me.Panel2.Controls.Add(Me.txtIdSearch)
+        Me.Panel2.Location = New System.Drawing.Point(13, 12)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(413, 161)
+        Me.Panel2.TabIndex = 30
         '
         'SubFormAccounts
         '
@@ -336,13 +404,9 @@ Partial Class SubFormAccounts
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(146, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1114, 637)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.IdPicBoxAcc)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.btnBrowseId)
-        Me.Controls.Add(Me.btnSearchId)
         Me.Controls.Add(Me.AccountsDataGrid)
-        Me.Controls.Add(Me.txtIdSearch)
+        Me.Controls.Add(Me.Panel2)
         Me.Name = "SubFormAccounts"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Accounts"
@@ -350,8 +414,9 @@ Partial Class SubFormAccounts
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.IdPicBoxAcc, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents AccountsDataGrid As DataGridView
@@ -377,7 +442,12 @@ Partial Class SubFormAccounts
     Friend WithEvents IdPicBoxAcc As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents cmbPosAcc As ComboBox
-    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents AccShowPass As CheckBox
     Friend WithEvents txtIdSearch As TextBox
     Friend WithEvents btnBrowseId As Button
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Label6 As Label
+    Friend WithEvents txtDate As MaskedTextBox
+    Friend WithEvents DateButton As Button
+    Friend WithEvents DateLabel As Label
 End Class

@@ -352,11 +352,14 @@ Partial Class SubFormInventory
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(146, Byte), Integer))
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.ClientSize = New System.Drawing.Size(1117, 650)
+        Me.ControlBox = False
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.ProdCodeTextBox)
         Me.Controls.Add(Me.DataGridView1)
         Me.ForeColor = System.Drawing.Color.Black
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "SubFormInventory"
         Me.Text = "Inventory"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()

@@ -205,7 +205,25 @@
     <Compile Include="SecurityForm02.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SubForms\AccountsSecurityForm.Designer.vb">
+      <DependentUpon>AccountsSecurityForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\AccountsSecurityForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SubForms\DatabaseModule.vb" />
+    <Compile Include="SubForms\InventorySecurityForm.Designer.vb">
+      <DependentUpon>InventorySecurityForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\InventorySecurityForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\SalesSecurityForm.Designer.vb">
+      <DependentUpon>SalesSecurityForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\SalesSecurityForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SubForms\SubFormAccounts.Designer.vb">
       <DependentUpon>SubFormAccounts.vb</DependentUpon>
     </Compile>
@@ -249,6 +267,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SecurityForm02.resx">
       <DependentUpon>SecurityForm02.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\AccountsSecurityForm.resx">
+      <DependentUpon>AccountsSecurityForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\InventorySecurityForm.resx">
+      <DependentUpon>InventorySecurityForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\SalesSecurityForm.resx">
+      <DependentUpon>SalesSecurityForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubForms\SubFormAccounts.resx">
       <DependentUpon>SubFormAccounts.vb</DependentUpon>

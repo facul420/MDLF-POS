@@ -63,18 +63,18 @@ Public Class DashboardForm
 
 #Region "====== Button-Clicks-Change ======"
     Private Sub btnInventory_Click(sender As Object, e As EventArgs) Handles btnInventory.Click
-        ' ActiveButton(sender, Color.FromArgb(236, 164, 0))
-        OpenSubForm(New SubFormInventory)
+        ActiveButton(sender, Color.FromArgb(236, 164, 0))
+        InventorySecurityForm.Visible = True
     End Sub
 
     Private Sub btnSales_Click(sender As Object, e As EventArgs) Handles btnSales.Click
-        ' ActiveButton(sender, Color.FromArgb(236, 164, 0))
-        OpenSubForm(New SubFormSales)
+        ActiveButton(sender, Color.FromArgb(236, 164, 0))
+        SalesSecurityForm.Visible = True
     End Sub
 
     Private Sub btnAccount_Click(sender As Object, e As EventArgs) Handles btnAccount.Click
-        ' ActiveButton(sender, Color.FromArgb(236, 164, 0))
-        OpenSubForm(New SubFormAccounts)
+        ActiveButton(sender, Color.FromArgb(236, 164, 0))
+        AccountsSecurityForm.Visible = True
     End Sub
 
     Private Sub imgHome_Click(sender As Object, e As EventArgs) Handles imgHome.Click
@@ -86,7 +86,7 @@ Public Class DashboardForm
 
 #End Region
 
-    Private Sub OpenSubForm(subForm As Form)
+    Public Sub OpenSubForm(subForm As Form)
         'Open only form
         If currentSubForm IsNot Nothing Then
             currentSubForm.Close()
@@ -139,11 +139,11 @@ Public Class DashboardForm
 
     End Sub
 
-    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+    Private Sub btnExit_Click(sender As Object, e As EventArgs)
         Application.Exit()
     End Sub
 
-    Private Sub btnMaximize_Click(sender As Object, e As EventArgs) Handles btnMaximize.Click
+    Private Sub btnMaximize_Click(sender As Object, e As EventArgs)
         If WindowState = FormWindowState.Normal Then
             WindowState = FormWindowState.Maximized
         Else
@@ -151,31 +151,22 @@ Public Class DashboardForm
         End If
     End Sub
 
-    Private Sub btnMinimize_Click(sender As Object, e As EventArgs) Handles btnMinimize.Click
+    Private Sub btnMinimize_Click(sender As Object, e As EventArgs)
         WindowState = FormWindowState.Minimized
     End Sub
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
         Me.Close()
         LoginForm.Visible = True
+
+
     End Sub
 
     Private Sub btnPOS_Click(sender As Object, e As EventArgs) Handles btnPOS.Click
         POSSecurityForm.Visible = True
-
     End Sub
 
-    Private Sub panelDesktop_Paint(sender As Object, e As PaintEventArgs) Handles panelDesktop.Paint
 
-    End Sub
-
-    Private Sub ShapeContainer2_Load(sender As Object, e As EventArgs) Handles ShapeContainer2.Load
-
-    End Sub
-
-    Private Sub LogoPanel_Paint(sender As Object, e As PaintEventArgs) Handles LogoPanel.Paint
-
-    End Sub
 
 
 

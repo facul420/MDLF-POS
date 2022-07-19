@@ -22,7 +22,6 @@ Partial Class SubFormAccounts
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-
         Me.AccountsDataGrid = New System.Windows.Forms.DataGridView()
         Me.IdAccounts = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NameAcc = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -62,12 +61,15 @@ Partial Class SubFormAccounts
         '
         'AccountsDataGrid
         '
+        Me.AccountsDataGrid.AllowUserToAddRows = False
         Me.AccountsDataGrid.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
         Me.AccountsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.AccountsDataGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdAccounts, Me.NameAcc, Me.PositionAcc, Me.UserAcc, Me.PassAcc, Me.DateOfEmployment})
         Me.AccountsDataGrid.Location = New System.Drawing.Point(431, 12)
         Me.AccountsDataGrid.Name = "AccountsDataGrid"
+        Me.AccountsDataGrid.ReadOnly = True
         Me.AccountsDataGrid.RowHeadersVisible = False
+        Me.AccountsDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.AccountsDataGrid.Size = New System.Drawing.Size(671, 613)
         Me.AccountsDataGrid.TabIndex = 2
         '
@@ -76,6 +78,8 @@ Partial Class SubFormAccounts
         Me.IdAccounts.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
         Me.IdAccounts.HeaderText = "ID"
         Me.IdAccounts.Name = "IdAccounts"
+        Me.IdAccounts.ReadOnly = True
+        Me.IdAccounts.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.IdAccounts.Width = 43
         '
         'NameAcc
@@ -83,18 +87,24 @@ Partial Class SubFormAccounts
         Me.NameAcc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.NameAcc.HeaderText = "Name"
         Me.NameAcc.Name = "NameAcc"
+        Me.NameAcc.ReadOnly = True
+        Me.NameAcc.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         '
         'PositionAcc
         '
         Me.PositionAcc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.PositionAcc.HeaderText = "Position"
         Me.PositionAcc.Name = "PositionAcc"
+        Me.PositionAcc.ReadOnly = True
+        Me.PositionAcc.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         '
         'UserAcc
         '
         Me.UserAcc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
         Me.UserAcc.HeaderText = "User Name"
         Me.UserAcc.Name = "UserAcc"
+        Me.UserAcc.ReadOnly = True
+        Me.UserAcc.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.UserAcc.Width = 85
         '
         'PassAcc
@@ -102,6 +112,8 @@ Partial Class SubFormAccounts
         Me.PassAcc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
         Me.PassAcc.HeaderText = "Password"
         Me.PassAcc.Name = "PassAcc"
+        Me.PassAcc.ReadOnly = True
+        Me.PassAcc.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.PassAcc.Width = 78
         '
         'DateOfEmployment
@@ -109,6 +121,8 @@ Partial Class SubFormAccounts
         Me.DateOfEmployment.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.DateOfEmployment.HeaderText = "Date of Employment"
         Me.DateOfEmployment.Name = "DateOfEmployment"
+        Me.DateOfEmployment.ReadOnly = True
+        Me.DateOfEmployment.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         '
         'Panel1
         '
@@ -399,17 +413,18 @@ Partial Class SubFormAccounts
         Me.Panel2.Size = New System.Drawing.Size(413, 161)
         Me.Panel2.TabIndex = 30
         '
-
         'SubFormAccounts
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(146, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1114, 637)
+        Me.ControlBox = False
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.AccountsDataGrid)
         Me.Controls.Add(Me.Panel2)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "SubFormAccounts"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Accounts"
@@ -423,12 +438,6 @@ Partial Class SubFormAccounts
 
     End Sub
     Friend WithEvents AccountsDataGrid As DataGridView
-    Friend WithEvents IdAccounts As DataGridViewTextBoxColumn
-    Friend WithEvents NameAcc As DataGridViewTextBoxColumn
-    Friend WithEvents PositionAcc As DataGridViewTextBoxColumn
-    Friend WithEvents UserAcc As DataGridViewTextBoxColumn
-    Friend WithEvents PassAcc As DataGridViewTextBoxColumn
-    Friend WithEvents DateOfEmployment As DataGridViewTextBoxColumn
     Friend WithEvents Panel1 As Panel
     Friend WithEvents txtDeleteAcc As Button
     Friend WithEvents btnSearchId As Button
@@ -453,7 +462,12 @@ Partial Class SubFormAccounts
     Friend WithEvents txtDate As MaskedTextBox
     Friend WithEvents DateButton As Button
     Friend WithEvents DateLabel As Label
-
+    Friend WithEvents IdAccounts As DataGridViewTextBoxColumn
+    Friend WithEvents NameAcc As DataGridViewTextBoxColumn
+    Friend WithEvents PositionAcc As DataGridViewTextBoxColumn
+    Friend WithEvents UserAcc As DataGridViewTextBoxColumn
+    Friend WithEvents PassAcc As DataGridViewTextBoxColumn
+    Friend WithEvents DateOfEmployment As DataGridViewTextBoxColumn
 
 
 

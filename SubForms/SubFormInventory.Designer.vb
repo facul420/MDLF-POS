@@ -114,7 +114,7 @@ Partial Class SubFormInventory
         Me.Label8.AutoSize = True
         Me.Label8.BackColor = System.Drawing.Color.SkyBlue
         Me.Label8.Font = New System.Drawing.Font("Bahnschrift Condensed", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(138, 133)
+        Me.Label8.Location = New System.Drawing.Point(128, 133)
         Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(141, 23)
@@ -124,7 +124,7 @@ Partial Class SubFormInventory
         'ProdCodeTextBox
         '
         Me.ProdCodeTextBox.Font = New System.Drawing.Font("Bahnschrift Condensed", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ProdCodeTextBox.Location = New System.Drawing.Point(81, 175)
+        Me.ProdCodeTextBox.Location = New System.Drawing.Point(81, 101)
         Me.ProdCodeTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.ProdCodeTextBox.Name = "ProdCodeTextBox"
         Me.ProdCodeTextBox.Size = New System.Drawing.Size(257, 30)

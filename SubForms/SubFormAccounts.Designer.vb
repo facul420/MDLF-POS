@@ -342,7 +342,7 @@ Partial Class SubFormAccounts
         'txtIdSearch
         '
         Me.txtIdSearch.Font = New System.Drawing.Font("Bahnschrift Condensed", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtIdSearch.Location = New System.Drawing.Point(281, 47)
+        Me.txtIdSearch.Location = New System.Drawing.Point(281, 45)
         Me.txtIdSearch.Margin = New System.Windows.Forms.Padding(2)
         Me.txtIdSearch.Name = "txtIdSearch"
         Me.txtIdSearch.Size = New System.Drawing.Size(128, 27)

@@ -65,16 +65,22 @@ Public Class DashboardForm
     Private Sub btnInventory_Click(sender As Object, e As EventArgs) Handles btnInventory.Click
         ActiveButton(sender, Color.FromArgb(236, 164, 0))
         InventorySecurityForm.Visible = True
+        AccountsSecurityForm.Visible = False
+        SalesSecurityForm.Visible = False
     End Sub
 
     Private Sub btnSales_Click(sender As Object, e As EventArgs) Handles btnSales.Click
         ActiveButton(sender, Color.FromArgb(236, 164, 0))
         SalesSecurityForm.Visible = True
+        InventorySecurityForm.Visible = False
+        AccountsSecurityForm.Visible = False
     End Sub
 
     Private Sub btnAccount_Click(sender As Object, e As EventArgs) Handles btnAccount.Click
         ActiveButton(sender, Color.FromArgb(236, 164, 0))
         AccountsSecurityForm.Visible = True
+        SalesSecurityForm.Visible = False
+        InventorySecurityForm.Visible = False
     End Sub
 
     Private Sub imgHome_Click(sender As Object, e As EventArgs) Handles imgHome.Click
@@ -164,6 +170,9 @@ Public Class DashboardForm
 
     Private Sub btnPOS_Click(sender As Object, e As EventArgs) Handles btnPOS.Click
         POSSecurityForm.Visible = True
+        SalesSecurityForm.Visible = False
+        InventorySecurityForm.Visible = False
+        AccountsSecurityForm.Visible = False
     End Sub
 
 

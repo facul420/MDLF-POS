@@ -4,10 +4,8 @@
             MsgBox("Please enter username/password.", vbExclamation)
         ElseIf txtUserName.Text = "admin123" And txtPassword.Text = "pass123" Then
             Me.Close()
-            DashboardForm.Visible = False
             DashboardForm.OpenSubForm(New SubFormInventory)
         Else
-            MessageBox.Show("Wrong Credentials", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             MessageBox.Show("Wrong Credentials", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub

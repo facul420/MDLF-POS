@@ -22,7 +22,7 @@ Partial Class SubFormInventory
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DGInventory = New System.Windows.Forms.DataGridView()
         Me.prodCode = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.prodType = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.prodName = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -30,55 +30,62 @@ Partial Class SubFormInventory
         Me.prodSpecialDiscount = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.itemsLeft = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.ProdCodeTextBox = New System.Windows.Forms.TextBox()
+        Me.SearchCodeTextBox = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.AdditionalItemsTextBox = New System.Windows.Forms.TextBox()
+        Me.GenerateButton = New System.Windows.Forms.Button()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.ProductTypeTextBox = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.UnitInStockTextBox = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.AdditionalItemsTextBox = New System.Windows.Forms.TextBox()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.DoneButton = New System.Windows.Forms.Button()
+        Me.DeleteButton = New System.Windows.Forms.Button()
+        Me.SaveButton = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.SpecialDiscountTextBox = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.ProductPriceTextBox = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.ProductNameTextBox = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.AddItemButton = New System.Windows.Forms.Button()
+        Me.ProductCodeTextBox = New System.Windows.Forms.TextBox()
+        Me.ClearButton = New System.Windows.Forms.Button()
+        CType(Me.DGInventory, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'DataGridView1
+        'DGInventory
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.prodCode, Me.prodType, Me.prodName, Me.prodPrice, Me.prodSpecialDiscount, Me.itemsLeft})
-        Me.DataGridView1.Location = New System.Drawing.Point(404, 0)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersVisible = False
-        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(715, 651)
-        Me.DataGridView1.TabIndex = 1
+        Me.DGInventory.AllowUserToAddRows = False
+        Me.DGInventory.BackgroundColor = System.Drawing.Color.WhiteSmoke
+        Me.DGInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGInventory.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.prodCode, Me.prodType, Me.prodName, Me.prodPrice, Me.prodSpecialDiscount, Me.itemsLeft})
+        Me.DGInventory.Location = New System.Drawing.Point(404, 0)
+        Me.DGInventory.Name = "DGInventory"
+        Me.DGInventory.ReadOnly = True
+        Me.DGInventory.RowHeadersVisible = False
+        Me.DGInventory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DGInventory.Size = New System.Drawing.Size(715, 651)
+        Me.DGInventory.TabIndex = 1
         '
         'prodCode
         '
+        Me.prodCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.prodCode.HeaderText = "Product Code"
         Me.prodCode.MinimumWidth = 20
         Me.prodCode.Name = "prodCode"
         Me.prodCode.ReadOnly = True
-        Me.prodCode.Width = 82
+        Me.prodCode.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         '
         'prodType
         '
+        Me.prodType.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.prodType.HeaderText = "Product Type"
         Me.prodType.Name = "prodType"
         Me.prodType.ReadOnly = True
+        Me.prodType.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         '
         'prodName
         '
@@ -87,6 +94,7 @@ Partial Class SubFormInventory
         Me.prodName.MinimumWidth = 50
         Me.prodName.Name = "prodName"
         Me.prodName.ReadOnly = True
+        Me.prodName.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         '
         'prodPrice
         '
@@ -94,6 +102,7 @@ Partial Class SubFormInventory
         Me.prodPrice.HeaderText = "Product Price"
         Me.prodPrice.Name = "prodPrice"
         Me.prodPrice.ReadOnly = True
+        Me.prodPrice.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         '
         'prodSpecialDiscount
         '
@@ -101,6 +110,7 @@ Partial Class SubFormInventory
         Me.prodSpecialDiscount.HeaderText = "Special Discount"
         Me.prodSpecialDiscount.Name = "prodSpecialDiscount"
         Me.prodSpecialDiscount.ReadOnly = True
+        Me.prodSpecialDiscount.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         '
         'itemsLeft
         '
@@ -108,6 +118,7 @@ Partial Class SubFormInventory
         Me.itemsLeft.HeaderText = "Unit in Stock"
         Me.itemsLeft.Name = "itemsLeft"
         Me.itemsLeft.ReadOnly = True
+        Me.itemsLeft.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         '
         'Label8
         '
@@ -121,39 +132,73 @@ Partial Class SubFormInventory
         Me.Label8.TabIndex = 4
         Me.Label8.Text = "Search Product Code"
         '
-        'ProdCodeTextBox
+        'SearchCodeTextBox
         '
-        Me.ProdCodeTextBox.Font = New System.Drawing.Font("Bahnschrift Condensed", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ProdCodeTextBox.Location = New System.Drawing.Point(81, 101)
-        Me.ProdCodeTextBox.Margin = New System.Windows.Forms.Padding(2)
-        Me.ProdCodeTextBox.Name = "ProdCodeTextBox"
-        Me.ProdCodeTextBox.Size = New System.Drawing.Size(257, 30)
-        Me.ProdCodeTextBox.TabIndex = 5
+        Me.SearchCodeTextBox.Font = New System.Drawing.Font("Bahnschrift Condensed", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SearchCodeTextBox.Location = New System.Drawing.Point(81, 101)
+        Me.SearchCodeTextBox.Margin = New System.Windows.Forms.Padding(2)
+        Me.SearchCodeTextBox.Name = "SearchCodeTextBox"
+        Me.SearchCodeTextBox.Size = New System.Drawing.Size(257, 30)
+        Me.SearchCodeTextBox.TabIndex = 5
         '
         'Panel1
         '
         Me.Panel1.BackgroundImage = Global.MDLF_POS.My.Resources.Resources.newa
+        Me.Panel1.Controls.Add(Me.ClearButton)
+        Me.Panel1.Controls.Add(Me.AdditionalItemsTextBox)
+        Me.Panel1.Controls.Add(Me.GenerateButton)
+        Me.Panel1.Controls.Add(Me.Label9)
         Me.Panel1.Controls.Add(Me.ProductTypeTextBox)
         Me.Panel1.Controls.Add(Me.Label7)
         Me.Panel1.Controls.Add(Me.UnitInStockTextBox)
         Me.Panel1.Controls.Add(Me.Label6)
-        Me.Panel1.Controls.Add(Me.AdditionalItemsTextBox)
-        Me.Panel1.Controls.Add(Me.Button3)
-        Me.Panel1.Controls.Add(Me.DoneButton)
+        Me.Panel1.Controls.Add(Me.DeleteButton)
+        Me.Panel1.Controls.Add(Me.SaveButton)
         Me.Panel1.Controls.Add(Me.Label5)
-        Me.Panel1.Controls.Add(Me.TextBox5)
+        Me.Panel1.Controls.Add(Me.SpecialDiscountTextBox)
         Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Controls.Add(Me.TextBox4)
+        Me.Panel1.Controls.Add(Me.ProductPriceTextBox)
         Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.TextBox3)
+        Me.Panel1.Controls.Add(Me.ProductNameTextBox)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.Button2)
-        Me.Panel1.Controls.Add(Me.TextBox1)
+        Me.Panel1.Controls.Add(Me.AddItemButton)
+        Me.Panel1.Controls.Add(Me.ProductCodeTextBox)
         Me.Panel1.Location = New System.Drawing.Point(12, 226)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(386, 412)
         Me.Panel1.TabIndex = 6
+        '
+        'AdditionalItemsTextBox
+        '
+        Me.AdditionalItemsTextBox.Font = New System.Drawing.Font("Bahnschrift Condensed", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AdditionalItemsTextBox.Location = New System.Drawing.Point(221, 261)
+        Me.AdditionalItemsTextBox.Margin = New System.Windows.Forms.Padding(2)
+        Me.AdditionalItemsTextBox.Name = "AdditionalItemsTextBox"
+        Me.AdditionalItemsTextBox.Size = New System.Drawing.Size(105, 27)
+        Me.AdditionalItemsTextBox.TabIndex = 31
+        '
+        'GenerateButton
+        '
+        Me.GenerateButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.GenerateButton.Location = New System.Drawing.Point(241, 30)
+        Me.GenerateButton.Name = "GenerateButton"
+        Me.GenerateButton.Size = New System.Drawing.Size(85, 27)
+        Me.GenerateButton.TabIndex = 30
+        Me.GenerateButton.Text = "Generate"
+        Me.GenerateButton.UseVisualStyleBackColor = False
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
+        Me.Label9.Font = New System.Drawing.Font("Bahnschrift Condensed", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(156, 264)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(21, 23)
+        Me.Label9.TabIndex = 29
+        Me.Label9.Text = "%"
         '
         'ProductTypeTextBox
         '
@@ -198,42 +243,35 @@ Partial Class SubFormInventory
         Me.Label6.TabIndex = 23
         Me.Label6.Text = "+Items"
         '
-        'AdditionalItemsTextBox
+        'DeleteButton
         '
-        Me.AdditionalItemsTextBox.Font = New System.Drawing.Font("Bahnschrift Condensed", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AdditionalItemsTextBox.Location = New System.Drawing.Point(221, 263)
-        Me.AdditionalItemsTextBox.Margin = New System.Windows.Forms.Padding(2)
-        Me.AdditionalItemsTextBox.Name = "AdditionalItemsTextBox"
-        Me.AdditionalItemsTextBox.Size = New System.Drawing.Size(105, 27)
-        Me.AdditionalItemsTextBox.TabIndex = 24
+        Me.DeleteButton.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.DeleteButton.BackColor = System.Drawing.Color.Red
+        Me.DeleteButton.Enabled = False
+        Me.DeleteButton.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
+        Me.DeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.DeleteButton.Font = New System.Drawing.Font("Bahnschrift Condensed", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DeleteButton.Location = New System.Drawing.Point(130, 316)
+        Me.DeleteButton.Name = "DeleteButton"
+        Me.DeleteButton.Size = New System.Drawing.Size(85, 35)
+        Me.DeleteButton.TabIndex = 22
+        Me.DeleteButton.Text = "Delete"
+        Me.DeleteButton.UseVisualStyleBackColor = False
         '
-        'Button3
+        'SaveButton
         '
-        Me.Button3.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Button3.BackColor = System.Drawing.Color.Red
-        Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Bahnschrift Condensed", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(130, 316)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(85, 35)
-        Me.Button3.TabIndex = 22
-        Me.Button3.Text = "Delete"
-        Me.Button3.UseVisualStyleBackColor = False
-        '
-        'DoneButton
-        '
-        Me.DoneButton.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.DoneButton.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.DoneButton.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
-        Me.DoneButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.DoneButton.Font = New System.Drawing.Font("Bahnschrift Condensed", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DoneButton.Location = New System.Drawing.Point(221, 316)
-        Me.DoneButton.Name = "DoneButton"
-        Me.DoneButton.Size = New System.Drawing.Size(105, 35)
-        Me.DoneButton.TabIndex = 21
-        Me.DoneButton.Text = "Save"
-        Me.DoneButton.UseVisualStyleBackColor = False
+        Me.SaveButton.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.SaveButton.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.SaveButton.Enabled = False
+        Me.SaveButton.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
+        Me.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SaveButton.Font = New System.Drawing.Font("Bahnschrift Condensed", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SaveButton.Location = New System.Drawing.Point(221, 316)
+        Me.SaveButton.Name = "SaveButton"
+        Me.SaveButton.Size = New System.Drawing.Size(105, 35)
+        Me.SaveButton.TabIndex = 21
+        Me.SaveButton.Text = "Save"
+        Me.SaveButton.UseVisualStyleBackColor = False
         '
         'Label5
         '
@@ -247,14 +285,14 @@ Partial Class SubFormInventory
         Me.Label5.TabIndex = 19
         Me.Label5.Text = "Special Discount"
         '
-        'TextBox5
+        'SpecialDiscountTextBox
         '
-        Me.TextBox5.Font = New System.Drawing.Font("Bahnschrift Condensed", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(40, 261)
-        Me.TextBox5.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(112, 27)
-        Me.TextBox5.TabIndex = 20
+        Me.SpecialDiscountTextBox.Font = New System.Drawing.Font("Bahnschrift Condensed", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SpecialDiscountTextBox.Location = New System.Drawing.Point(40, 261)
+        Me.SpecialDiscountTextBox.Margin = New System.Windows.Forms.Padding(2)
+        Me.SpecialDiscountTextBox.Name = "SpecialDiscountTextBox"
+        Me.SpecialDiscountTextBox.Size = New System.Drawing.Size(112, 27)
+        Me.SpecialDiscountTextBox.TabIndex = 20
         '
         'Label4
         '
@@ -268,14 +306,14 @@ Partial Class SubFormInventory
         Me.Label4.TabIndex = 17
         Me.Label4.Text = "Product Price"
         '
-        'TextBox4
+        'ProductPriceTextBox
         '
-        Me.TextBox4.Font = New System.Drawing.Font("Bahnschrift Condensed", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(39, 197)
-        Me.TextBox4.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(113, 27)
-        Me.TextBox4.TabIndex = 18
+        Me.ProductPriceTextBox.Font = New System.Drawing.Font("Bahnschrift Condensed", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProductPriceTextBox.Location = New System.Drawing.Point(39, 197)
+        Me.ProductPriceTextBox.Margin = New System.Windows.Forms.Padding(2)
+        Me.ProductPriceTextBox.Name = "ProductPriceTextBox"
+        Me.ProductPriceTextBox.Size = New System.Drawing.Size(113, 27)
+        Me.ProductPriceTextBox.TabIndex = 18
         '
         'Label3
         '
@@ -289,14 +327,14 @@ Partial Class SubFormInventory
         Me.Label3.TabIndex = 15
         Me.Label3.Text = "Product Name"
         '
-        'TextBox3
+        'ProductNameTextBox
         '
-        Me.TextBox3.Font = New System.Drawing.Font("Bahnschrift Condensed", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(39, 138)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(287, 27)
-        Me.TextBox3.TabIndex = 16
+        Me.ProductNameTextBox.Font = New System.Drawing.Font("Bahnschrift Condensed", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProductNameTextBox.Location = New System.Drawing.Point(39, 138)
+        Me.ProductNameTextBox.Margin = New System.Windows.Forms.Padding(2)
+        Me.ProductNameTextBox.Name = "ProductNameTextBox"
+        Me.ProductNameTextBox.Size = New System.Drawing.Size(287, 27)
+        Me.ProductNameTextBox.TabIndex = 16
         '
         'Label2
         '
@@ -322,28 +360,45 @@ Partial Class SubFormInventory
         Me.Label1.TabIndex = 11
         Me.Label1.Text = "Product Code"
         '
-        'Button2
+        'AddItemButton
         '
-        Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Button2.BackColor = System.Drawing.Color.Turquoise
-        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Bahnschrift Condensed", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(39, 316)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(83, 35)
-        Me.Button2.TabIndex = 11
-        Me.Button2.Text = "Add Item"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.AddItemButton.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.AddItemButton.BackColor = System.Drawing.Color.Turquoise
+        Me.AddItemButton.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
+        Me.AddItemButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.AddItemButton.Font = New System.Drawing.Font("Bahnschrift Condensed", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AddItemButton.Location = New System.Drawing.Point(39, 316)
+        Me.AddItemButton.Name = "AddItemButton"
+        Me.AddItemButton.Size = New System.Drawing.Size(83, 35)
+        Me.AddItemButton.TabIndex = 11
+        Me.AddItemButton.Text = "Add Item"
+        Me.AddItemButton.UseVisualStyleBackColor = False
         '
-        'TextBox1
+        'ProductCodeTextBox
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Bahnschrift Condensed", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(39, 30)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(287, 27)
-        Me.TextBox1.TabIndex = 12
+        Me.ProductCodeTextBox.Font = New System.Drawing.Font("Bahnschrift Condensed", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProductCodeTextBox.Location = New System.Drawing.Point(39, 30)
+        Me.ProductCodeTextBox.Margin = New System.Windows.Forms.Padding(2)
+        Me.ProductCodeTextBox.MaxLength = 50000
+        Me.ProductCodeTextBox.Name = "ProductCodeTextBox"
+        Me.ProductCodeTextBox.ReadOnly = True
+        Me.ProductCodeTextBox.Size = New System.Drawing.Size(197, 27)
+        Me.ProductCodeTextBox.TabIndex = 12
+        '
+        'ClearButton
+        '
+        Me.ClearButton.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.ClearButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.ClearButton.Enabled = False
+        Me.ClearButton.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
+        Me.ClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ClearButton.Font = New System.Drawing.Font("Bahnschrift Condensed", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ClearButton.Location = New System.Drawing.Point(120, 357)
+        Me.ClearButton.Name = "ClearButton"
+        Me.ClearButton.Size = New System.Drawing.Size(105, 35)
+        Me.ClearButton.TabIndex = 32
+        Me.ClearButton.Text = "Clear"
+        Me.ClearButton.UseVisualStyleBackColor = False
         '
         'SubFormInventory
         '
@@ -355,14 +410,14 @@ Partial Class SubFormInventory
         Me.ControlBox = False
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.ProdCodeTextBox)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.SearchCodeTextBox)
+        Me.Controls.Add(Me.DGInventory)
         Me.ForeColor = System.Drawing.Color.Black
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "SubFormInventory"
         Me.Text = "Inventory"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DGInventory, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
@@ -370,31 +425,34 @@ Partial Class SubFormInventory
 
     End Sub
 
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents DGInventory As DataGridView
     Friend WithEvents Label8 As Label
-    Friend WithEvents ProdCodeTextBox As TextBox
+    Friend WithEvents SearchCodeTextBox As TextBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents SpecialDiscountTextBox As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents ProductPriceTextBox As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents ProductNameTextBox As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button2 As Button
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Button3 As Button
-    Friend WithEvents DoneButton As Button
+    Friend WithEvents AddItemButton As Button
+    Friend WithEvents ProductCodeTextBox As TextBox
+    Friend WithEvents DeleteButton As Button
+    Friend WithEvents SaveButton As Button
     Friend WithEvents Label6 As Label
-    Friend WithEvents AdditionalItemsTextBox As TextBox
     Friend WithEvents ProductTypeTextBox As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents UnitInStockTextBox As TextBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents GenerateButton As Button
+    Friend WithEvents AdditionalItemsTextBox As TextBox
     Friend WithEvents prodCode As DataGridViewTextBoxColumn
     Friend WithEvents prodType As DataGridViewTextBoxColumn
     Friend WithEvents prodName As DataGridViewTextBoxColumn
     Friend WithEvents prodPrice As DataGridViewTextBoxColumn
     Friend WithEvents prodSpecialDiscount As DataGridViewTextBoxColumn
     Friend WithEvents itemsLeft As DataGridViewTextBoxColumn
+    Friend WithEvents ClearButton As Button
 End Class

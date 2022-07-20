@@ -40,7 +40,7 @@ Public Class POSForm
 
         If reader.Read Then
             ProdNameTextBox.Text = reader.GetString("Product_Name")
-            ProdPriceTextBox.Text = reader.GetString("Product_Price")
+            ProdPriceTextBox.Text = String.Format("{0:F2}", reader.GetString("Product_Price"))
             DiscountTextBox.Text = reader.GetString("Special_Discount")
         Else
             MsgBox("No Such Information", vbExclamation)
@@ -80,7 +80,7 @@ Public Class POSForm
     End Sub
 
     Private Sub addItem()
-        dgItems.Rows.Add(ProdNameTextBox.Text, ProdPriceTextBox.Text, QuantityTextBox.Text, String.Format("{0:F3}", computeDiscount), String.Format("{0:F3}", computeTotalPrice))
+        dgItems.Rows.Add(ProdNameTextBox.Text, String.Format("{0:F2}", ProdPriceTextBox.Text), QuantityTextBox.Text, String.Format("{0:F2}", computeDiscount), String.Format("{0:F2}", computeTotalPrice))
         ProdCodeTextBox.Clear()
         QuantityTextBox.Clear()
         ProdNameTextBox.Clear()
@@ -195,7 +195,7 @@ Public Class POSForm
                 QuantityTextBox.Focus()
             End If
         ElseIf e.KeyCode = Keys.F4 Then
-            AmountDueTextBox.Text = amountDue()
+            AmountDueTextBox.Text = String.Format("{0:F2}", amountDue())
 
             ProdCodeTextBox.Enabled = False
             QuantityTextBox.Enabled = False
@@ -223,7 +223,7 @@ Public Class POSForm
                 MsgBox("Invalid Entry", vbExclamation)
             Else
                 addItem()
-                AmountDueTextBox.Text = amountDue()
+                AmountDueTextBox.Text = String.Format("{0:F2}", amountDue())
             End If
         ElseIf e.KeyCode = Keys.F3 Then
             ProdCodeTextBox.Clear()
@@ -254,9 +254,9 @@ Public Class POSForm
                 MsgBox("Invalid Entry", MsgBoxStyle.Exclamation)
             Else
                 CashTextBox.Enabled = False
-                TotalAmountTextBox.Text = AmountDueTextBox.Text
+                TotalAmountTextBox.Text = String.Format("{0:F2}", AmountDueTextBox.Text)
                 Cash2TextBox.Text = CashTextBox.Text + ".00"
-                ChangeTextBox.Text = computeChange()
+                ChangeTextBox.Text = String.Format("{0:F2}", computeChange())
                 ChangeTextBox.Focus()
             End If
         End If

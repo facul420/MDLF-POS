@@ -62,9 +62,9 @@ Public Class SubFormSales
 
     Private Sub SearchTextBox_TextChanged(sender As Object, e As EventArgs) Handles SearchTextBox.TextChanged
         searchData()
-        TSDiscountTextBox.Text = computeTotalDiscountRows()
+        TSDiscountTextBox.Text = String.Format("{0:F2}", computeTotalDiscountRows())
         TSItemsTextBox.Text = computeTotalItemsRows()
-        TSAmountTextBox.Text = computeTotalAmountRows()
+        TSAmountTextBox.Text = String.Format("{0:F2}", computeTotalAmountRows())
     End Sub
 
 

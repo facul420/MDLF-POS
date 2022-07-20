@@ -38,14 +38,19 @@ Partial Class SubFormSales
         'DGSales
         '
         Me.DGSales.AllowUserToAddRows = False
+        Me.DGSales.AllowUserToResizeColumns = False
+        Me.DGSales.AllowUserToResizeRows = False
+        Me.DGSales.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DGSales.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
         Me.DGSales.BackgroundColor = System.Drawing.Color.White
         Me.DGSales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGSales.Location = New System.Drawing.Point(13, 69)
         Me.DGSales.Name = "DGSales"
         Me.DGSales.RowHeadersVisible = False
         Me.DGSales.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
+        Me.DGSales.RowTemplate.ReadOnly = True
         Me.DGSales.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DGSales.Size = New System.Drawing.Size(776, 335)
+        Me.DGSales.Size = New System.Drawing.Size(1089, 442)
         Me.DGSales.TabIndex = 0
         '
         'Label8
@@ -74,7 +79,7 @@ Partial Class SubFormSales
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Bahnschrift Condensed", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(474, 413)
+        Me.Label1.Location = New System.Drawing.Point(609, 556)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(130, 23)
@@ -84,7 +89,7 @@ Partial Class SubFormSales
         'TSAmountTextBox
         '
         Me.TSAmountTextBox.Font = New System.Drawing.Font("Bahnschrift Condensed", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TSAmountTextBox.Location = New System.Drawing.Point(608, 409)
+        Me.TSAmountTextBox.Location = New System.Drawing.Point(743, 552)
         Me.TSAmountTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.TSAmountTextBox.Name = "TSAmountTextBox"
         Me.TSAmountTextBox.ReadOnly = True
@@ -96,7 +101,7 @@ Partial Class SubFormSales
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Bahnschrift Condensed", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(273, 412)
+        Me.Label2.Location = New System.Drawing.Point(408, 555)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(110, 23)
@@ -106,7 +111,7 @@ Partial Class SubFormSales
         'TSItemsTextBox
         '
         Me.TSItemsTextBox.Font = New System.Drawing.Font("Bahnschrift Condensed", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TSItemsTextBox.Location = New System.Drawing.Point(387, 409)
+        Me.TSItemsTextBox.Location = New System.Drawing.Point(522, 552)
         Me.TSItemsTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.TSItemsTextBox.Name = "TSItemsTextBox"
         Me.TSItemsTextBox.ReadOnly = True
@@ -130,7 +135,7 @@ Partial Class SubFormSales
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Bahnschrift Condensed", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(11, 413)
+        Me.Label4.Location = New System.Drawing.Point(146, 556)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(136, 23)
@@ -140,7 +145,7 @@ Partial Class SubFormSales
         'TSDiscountTextBox
         '
         Me.TSDiscountTextBox.Font = New System.Drawing.Font("Bahnschrift Condensed", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TSDiscountTextBox.Location = New System.Drawing.Point(151, 409)
+        Me.TSDiscountTextBox.Location = New System.Drawing.Point(286, 552)
         Me.TSDiscountTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.TSDiscountTextBox.Name = "TSDiscountTextBox"
         Me.TSDiscountTextBox.ReadOnly = True
@@ -152,7 +157,8 @@ Partial Class SubFormSales
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(146, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(1114, 637)
+        Me.ControlBox = False
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.TSDiscountTextBox)
         Me.Controls.Add(Me.Label3)
@@ -163,6 +169,8 @@ Partial Class SubFormSales
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.SearchTextBox)
         Me.Controls.Add(Me.DGSales)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "SubFormSales"
         Me.Text = "Sales"
         CType(Me.DGSales, System.ComponentModel.ISupportInitialize).EndInit()

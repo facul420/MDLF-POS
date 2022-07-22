@@ -16,22 +16,20 @@ Public Class SubFormInventory
     End Sub
     Private Sub addingItems()
         connect()
-        query = "INSERT INTO `tbl_prodinventoryinfo`(`Product_Code`, `Product_Name`, `Product_Price`, `Product_Type`, `Special_Discount`, `Unit_In_Stock`) VALUES (@productcode, @productname, @productprice, @producttype, @specialdiscount, @unitinstock)"
-        command.CommandText = query
-        command.Connection = conn
-        command.Parameters.Clear()
 
         If ProductCodeTextBox.Text = "" Or ProductNameTextBox.Text = "" Or ProductPriceTextBox.Text = "" Or SpecialDiscountTextBox.Text = "" Or ProductTypeTextBox.Text = "" Or AdditionalItemsTextBox.Text = "" Then
             MsgBox("Lacking information", MsgBoxStyle.Exclamation)
         Else
-            command.Parameters.Add("@productcode", MySqlDbType.Int64).Value = ProductCodeTextBox.Text.Trim
+            query = "INSERT INTO `tbl_prodinventoryinfo`(`Product_Code`, `Product_Name`, `Product_Price`, `Product_Type`, `Special_Discount`, `Unit_In_Stock`) VALUE ('" & ProductCodeTextBox.Text & "', @productname, @productprice, @producttype, @specialdiscount, @unitinstock)"
+            command.CommandText = query
+            command.Connection = conn
+            command.Parameters.Clear()
             command.Parameters.Add("@productname", MySqlDbType.VarChar).Value = ProductNameTextBox.Text.Trim
-            command.Parameters.Add("@productprice", MySqlDbType.Double).Value = ProductPriceTextBox.Text.Trim
-            command.Parameters.Add("@specialdiscount", MySqlDbType.Double).Value = SpecialDiscountTextBox.Text.Trim
+            command.Parameters.Add("@productprice", MySqlDbType.Double).Value = ProductPriceTextBox.Text
             command.Parameters.Add("@producttype", MySqlDbType.VarChar).Value = ProductTypeTextBox.Text.Trim
+            command.Parameters.Add("@specialdiscount", MySqlDbType.Double).Value = SpecialDiscountTextBox.Text.Trim
             command.Parameters.Add("@unitinstock", MySqlDbType.Int64).Value = AdditionalItemsTextBox.Text.Trim
             command.ExecuteNonQuery()
-
             ProductCodeTextBox.Clear()
             ProductNameTextBox.Clear()
             ProductPriceTextBox.Clear()
@@ -78,7 +76,7 @@ Public Class SubFormInventory
         connect()
         query = "DELETE FROM `tbl_prodinventoryinfo` WHERE `Product_Code` = @productcode"
         Dim choice As MsgBoxResult = MessageBox.Show("Would you like to continue?", "Remove item", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-        If MsgBoxResult.Yes Then
+        If DialogResult.Yes Then
             command.CommandText = query
             command.Connection = conn
             command.Parameters.Clear()
@@ -107,6 +105,7 @@ Public Class SubFormInventory
         query = "SELECT * FROM `tbl_prodinventoryinfo`"
         command.CommandText = query
         command.Connection = conn
+        command.Parameters.Clear()
         reader = command.ExecuteReader
         While reader.Read
             DGInventory.Rows.Add(reader.GetString("Product_Code"), reader.GetString("Product_Type"), reader.GetString("Product_Name"), reader.GetString("Product_Price"), reader.GetString("Special_Discount"), reader.GetString("Unit_In_Stock"))
@@ -116,15 +115,15 @@ Public Class SubFormInventory
         Dim x As String
         Dim rand As Random = New Random()
 
-        For y As Integer = 1 To 10
+        For y As Integer = 1 To 9
             x += Convert.ToString(rand.Next(0, 9))
-        Next
 
+        Next
         ProductCodeTextBox.Text = x
         If ProductCodeTextBox.Text = x Then
             x = Nothing
         End If
-
+        ProductTypeTextBox.Focus()
     End Sub
 
     Private Function unitinstockadd(unitinstock As TextBox, additem As TextBox)
@@ -156,6 +155,7 @@ Public Class SubFormInventory
         DeleteButton.Enabled = True
         SaveButton.Enabled = True
         ClearButton.Enabled = True
+        ProductCodeTextBox.Clear()
         Dim x As Integer
         x = DGInventory.CurrentRow.Index
         ProductCodeTextBox.Text = DGInventory.Item(0, x).Value.ToString
@@ -167,6 +167,7 @@ Public Class SubFormInventory
     End Sub
     Private Sub AddItemButton_Click(sender As Object, e As EventArgs) Handles AddItemButton.Click
         addingItems()
+
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles GenerateButton.Click
@@ -178,7 +179,11 @@ Public Class SubFormInventory
     End Sub
 
     Private Sub ProdCodeTextBox_TextChanged(sender As Object, e As EventArgs) Handles SearchCodeTextBox.TextChanged
-        search()
+        If Not IsNumeric(SearchCodeTextBox.Text) Then
+            SearchCodeTextBox.Clear()
+        Else
+            search()
+        End If
     End Sub
 
     Private Sub SaveButton_Click(sender As Object, e As EventArgs) Handles SaveButton.Click
@@ -198,5 +203,27 @@ Public Class SubFormInventory
         UnitInStockTextBox.Clear()
         AdditionalItemsTextBox.Clear()
         GenerateButton.Enabled = True
+        SaveButton.Enabled = False
+        DeleteButton.Enabled = False
+    End Sub
+
+
+
+    Private Sub ProductPriceTextBox_TextChanged(sender As Object, e As EventArgs) Handles ProductPriceTextBox.TextChanged
+        If Not IsNumeric(ProductPriceTextBox.Text) Then
+            ProductPriceTextBox.Clear()
+        End If
+    End Sub
+
+    Private Sub SpecialDiscountTextBox_TextChanged(sender As Object, e As EventArgs) Handles SpecialDiscountTextBox.TextChanged
+        If Not IsNumeric(SpecialDiscountTextBox.Text) Then
+            SpecialDiscountTextBox.Clear()
+        End If
+    End Sub
+
+    Private Sub AdditionalItemsTextBox_TextChanged(sender As Object, e As EventArgs) Handles AdditionalItemsTextBox.TextChanged
+        If Not IsNumeric(AdditionalItemsTextBox.Text) Then
+            AdditionalItemsTextBox.Clear()
+        End If
     End Sub
 End Class

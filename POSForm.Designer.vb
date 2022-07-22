@@ -49,10 +49,12 @@ Partial Class POSForm
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.dgItems = New System.Windows.Forms.DataGridView()
+        Me.prodcode = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.TotalAmountTextBox = New System.Windows.Forms.TextBox()
@@ -61,6 +63,10 @@ Partial Class POSForm
         Me.AmountDueTextBox = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.UnitInStockTextBox = New System.Windows.Forms.TextBox()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.CashTextBox = New System.Windows.Forms.TextBox()
         Me.TransDateTextBox = New System.Windows.Forms.TextBox()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.Label25 = New System.Windows.Forms.Label()
@@ -79,9 +85,7 @@ Partial Class POSForm
         Me.ProdPriceTextBox = New System.Windows.Forms.TextBox()
         Me.ProdCodeTextBox = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
         Me.ProdNameTextBox = New System.Windows.Forms.TextBox()
-        Me.CashTextBox = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.OptionLabel = New System.Windows.Forms.Label()
@@ -494,10 +498,11 @@ Partial Class POSForm
         Me.dgItems.AllowUserToAddRows = False
         Me.dgItems.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgItems.BackgroundColor = System.Drawing.Color.White
-        Me.dgItems.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column5, Me.Column4})
+        Me.dgItems.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.prodcode, Me.Column1, Me.Column2, Me.Column3, Me.Column5, Me.Column6, Me.Column4})
         Me.dgItems.Location = New System.Drawing.Point(552, 33)
         Me.dgItems.Margin = New System.Windows.Forms.Padding(2)
         Me.dgItems.Name = "dgItems"
+        Me.dgItems.ReadOnly = True
         Me.dgItems.RowHeadersVisible = False
         Me.dgItems.RowHeadersWidth = 51
         Me.dgItems.RowTemplate.Height = 29
@@ -505,16 +510,22 @@ Partial Class POSForm
         Me.dgItems.Size = New System.Drawing.Size(788, 372)
         Me.dgItems.TabIndex = 17
         '
+        'prodcode
+        '
+        Me.prodcode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.prodcode.HeaderText = "Product Code"
+        Me.prodcode.Name = "prodcode"
+        Me.prodcode.ReadOnly = True
+        '
         'Column1
         '
         Me.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.Column1.Frozen = True
         Me.Column1.HeaderText = "Product"
-        Me.Column1.MinimumWidth = 400
+        Me.Column1.MinimumWidth = 200
         Me.Column1.Name = "Column1"
         Me.Column1.ReadOnly = True
         Me.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Column1.Width = 400
+        Me.Column1.Width = 200
         '
         'Column2
         '
@@ -539,6 +550,15 @@ Partial Class POSForm
         Me.Column5.HeaderText = "Discount"
         Me.Column5.MinimumWidth = 100
         Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        '
+        'Column6
+        '
+        Me.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column6.HeaderText = "Sales Type"
+        Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
+        Me.Column6.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         '
         'Column4
         '
@@ -599,10 +619,10 @@ Partial Class POSForm
         Me.Panel4.Controls.Add(Me.AmountDueTextBox)
         Me.Panel4.Controls.Add(Me.Label3)
         Me.Panel4.ForeColor = System.Drawing.Color.White
-        Me.Panel4.Location = New System.Drawing.Point(189, 512)
+        Me.Panel4.Location = New System.Drawing.Point(195, 512)
         Me.Panel4.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(571, 157)
+        Me.Panel4.Size = New System.Drawing.Size(565, 157)
         Me.Panel4.TabIndex = 3
         '
         'AmountDueTextBox
@@ -611,12 +631,11 @@ Partial Class POSForm
         Me.AmountDueTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.AmountDueTextBox.Font = New System.Drawing.Font("Bahnschrift SemiBold Condensed", 72.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AmountDueTextBox.ForeColor = System.Drawing.Color.White
-        Me.AmountDueTextBox.Location = New System.Drawing.Point(1, 55)
+        Me.AmountDueTextBox.Location = New System.Drawing.Point(0, 55)
         Me.AmountDueTextBox.Margin = New System.Windows.Forms.Padding(2)
-        Me.AmountDueTextBox.Multiline = True
         Me.AmountDueTextBox.Name = "AmountDueTextBox"
         Me.AmountDueTextBox.ReadOnly = True
-        Me.AmountDueTextBox.Size = New System.Drawing.Size(569, 102)
+        Me.AmountDueTextBox.Size = New System.Drawing.Size(563, 116)
         Me.AmountDueTextBox.TabIndex = 1
         Me.AmountDueTextBox.Text = "0.00"
         Me.AmountDueTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -640,6 +659,10 @@ Partial Class POSForm
         Me.Panel2.BackgroundImage = Global.MDLF_POS.My.Resources.Resources.newa
         Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.Label13)
+        Me.Panel2.Controls.Add(Me.UnitInStockTextBox)
+        Me.Panel2.Controls.Add(Me.Label27)
+        Me.Panel2.Controls.Add(Me.CashTextBox)
         Me.Panel2.Controls.Add(Me.TransDateTextBox)
         Me.Panel2.Controls.Add(Me.Label26)
         Me.Panel2.Controls.Add(Me.Label25)
@@ -658,15 +681,58 @@ Partial Class POSForm
         Me.Panel2.Controls.Add(Me.ProdPriceTextBox)
         Me.Panel2.Controls.Add(Me.ProdCodeTextBox)
         Me.Panel2.Controls.Add(Me.Label11)
-        Me.Panel2.Controls.Add(Me.Label13)
         Me.Panel2.Controls.Add(Me.ProdNameTextBox)
-        Me.Panel2.Controls.Add(Me.CashTextBox)
         Me.Panel2.Controls.Add(Me.Label10)
         Me.Panel2.Location = New System.Drawing.Point(8, 33)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(540, 372)
         Me.Panel2.TabIndex = 1
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.BackColor = System.Drawing.Color.Transparent
+        Me.Label13.Font = New System.Drawing.Font("Bahnschrift SemiBold Condensed", 18.0!, System.Drawing.FontStyle.Bold)
+        Me.Label13.Location = New System.Drawing.Point(316, 295)
+        Me.Label13.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(52, 29)
+        Me.Label13.TabIndex = 25
+        Me.Label13.Text = "Cash"
+        '
+        'UnitInStockTextBox
+        '
+        Me.UnitInStockTextBox.Enabled = False
+        Me.UnitInStockTextBox.Font = New System.Drawing.Font("Bahnschrift SemiBold Condensed", 18.0!, System.Drawing.FontStyle.Bold)
+        Me.UnitInStockTextBox.Location = New System.Drawing.Point(134, 326)
+        Me.UnitInStockTextBox.Margin = New System.Windows.Forms.Padding(2)
+        Me.UnitInStockTextBox.Name = "UnitInStockTextBox"
+        Me.UnitInStockTextBox.ReadOnly = True
+        Me.UnitInStockTextBox.Size = New System.Drawing.Size(117, 36)
+        Me.UnitInStockTextBox.TabIndex = 26
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.BackColor = System.Drawing.Color.Transparent
+        Me.Label27.Font = New System.Drawing.Font("Bahnschrift SemiBold Condensed", 18.0!, System.Drawing.FontStyle.Bold)
+        Me.Label27.Location = New System.Drawing.Point(134, 297)
+        Me.Label27.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(113, 29)
+        Me.Label27.TabIndex = 25
+        Me.Label27.Text = "Unit in Stock"
+        '
+        'CashTextBox
+        '
+        Me.CashTextBox.Enabled = False
+        Me.CashTextBox.Font = New System.Drawing.Font("Bahnschrift SemiBold Condensed", 18.0!, System.Drawing.FontStyle.Bold)
+        Me.CashTextBox.Location = New System.Drawing.Point(259, 326)
+        Me.CashTextBox.Margin = New System.Windows.Forms.Padding(2)
+        Me.CashTextBox.Name = "CashTextBox"
+        Me.CashTextBox.Size = New System.Drawing.Size(185, 36)
+        Me.CashTextBox.TabIndex = 26
         '
         'TransDateTextBox
         '
@@ -883,18 +949,6 @@ Partial Class POSForm
         Me.Label11.TabIndex = 13
         Me.Label11.Text = "Product Price"
         '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.BackColor = System.Drawing.Color.Transparent
-        Me.Label13.Font = New System.Drawing.Font("Bahnschrift SemiBold Condensed", 18.0!, System.Drawing.FontStyle.Bold)
-        Me.Label13.Location = New System.Drawing.Point(256, 295)
-        Me.Label13.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(52, 29)
-        Me.Label13.TabIndex = 10
-        Me.Label13.Text = "Cash"
-        '
         'ProdNameTextBox
         '
         Me.ProdNameTextBox.Font = New System.Drawing.Font("Bahnschrift SemiBold Condensed", 18.0!, System.Drawing.FontStyle.Bold)
@@ -904,16 +958,6 @@ Partial Class POSForm
         Me.ProdNameTextBox.ReadOnly = True
         Me.ProdNameTextBox.Size = New System.Drawing.Size(484, 36)
         Me.ProdNameTextBox.TabIndex = 11
-        '
-        'CashTextBox
-        '
-        Me.CashTextBox.Enabled = False
-        Me.CashTextBox.Font = New System.Drawing.Font("Bahnschrift SemiBold Condensed", 18.0!, System.Drawing.FontStyle.Bold)
-        Me.CashTextBox.Location = New System.Drawing.Point(261, 326)
-        Me.CashTextBox.Margin = New System.Windows.Forms.Padding(2)
-        Me.CashTextBox.Name = "CashTextBox"
-        Me.CashTextBox.Size = New System.Drawing.Size(185, 36)
-        Me.CashTextBox.TabIndex = 12
         '
         'Label10
         '
@@ -1034,8 +1078,6 @@ Partial Class POSForm
     Friend WithEvents Label11 As Label
     Friend WithEvents ProdNameTextBox As TextBox
     Friend WithEvents Label10 As Label
-    Friend WithEvents CashTextBox As TextBox
-    Friend WithEvents Label13 As Label
     Friend WithEvents WholeSaleRadioButton As RadioButton
     Friend WithEvents RetailRadioButton As RadioButton
     Friend WithEvents Label9 As Label
@@ -1064,11 +1106,6 @@ Partial Class POSForm
     Friend WithEvents OptionLabel As Label
     Friend WithEvents NewButton As Button
     Friend WithEvents Label22 As Label
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As DataGridViewTextBoxColumn
-    Friend WithEvents Column5 As DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Label24 As Label
     Friend WithEvents DiscountTextBox As TextBox
     Friend WithEvents Label23 As Label
@@ -1078,4 +1115,15 @@ Partial Class POSForm
     Friend WithEvents OvalShape1 As Microsoft.VisualBasic.PowerPacks.OvalShape
     Friend WithEvents OptionLabel1 As Label
     Friend WithEvents TransDateTextBox As TextBox
+    Friend WithEvents Label13 As Label
+    Friend WithEvents CashTextBox As TextBox
+    Friend WithEvents UnitInStockTextBox As TextBox
+    Friend WithEvents Label27 As Label
+    Friend WithEvents prodcode As DataGridViewTextBoxColumn
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
 End Class

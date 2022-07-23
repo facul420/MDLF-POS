@@ -40,8 +40,11 @@ Partial Class POSForm
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
+        Me.posCashierID = New System.Windows.Forms.Label()
+        Me.posCashierName = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label28 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.ChangeTextBox = New System.Windows.Forms.TextBox()
@@ -79,7 +82,6 @@ Partial Class POSForm
         Me.Label9 = New System.Windows.Forms.Label()
         Me.TransNoTextBox = New System.Windows.Forms.TextBox()
         Me.QuantityTextBox = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.ProdPriceTextBox = New System.Windows.Forms.TextBox()
@@ -92,6 +94,8 @@ Partial Class POSForm
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.OvalShape1 = New Microsoft.VisualBasic.PowerPacks.OvalShape()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label29 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.dgItems, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -118,12 +122,16 @@ Partial Class POSForm
         Me.Panel1.Controls.Add(Me.AmountDueButton)
         Me.Panel1.Controls.Add(Me.CancelButton)
         Me.Panel1.Controls.Add(Me.Label21)
+        Me.Panel1.Controls.Add(Me.Label29)
         Me.Panel1.Controls.Add(Me.Label20)
         Me.Panel1.Controls.Add(Me.Label19)
         Me.Panel1.Controls.Add(Me.Label18)
         Me.Panel1.Controls.Add(Me.Label17)
+        Me.Panel1.Controls.Add(Me.posCashierID)
+        Me.Panel1.Controls.Add(Me.posCashierName)
         Me.Panel1.Controls.Add(Me.Label16)
         Me.Panel1.Controls.Add(Me.Label15)
+        Me.Panel1.Controls.Add(Me.Label28)
         Me.Panel1.Controls.Add(Me.Label14)
         Me.Panel1.Controls.Add(Me.Panel3)
         Me.Panel1.Controls.Add(Me.dgItems)
@@ -384,6 +392,32 @@ Partial Class POSForm
         Me.Label17.TabIndex = 25
         Me.Label17.Text = "F4"
         '
+        'posCashierID
+        '
+        Me.posCashierID.AutoSize = True
+        Me.posCashierID.BackColor = System.Drawing.Color.Transparent
+        Me.posCashierID.Font = New System.Drawing.Font("Bahnschrift SemiBold Condensed", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.posCashierID.Location = New System.Drawing.Point(1230, 6)
+        Me.posCashierID.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.posCashierID.Name = "posCashierID"
+        Me.posCashierID.Size = New System.Drawing.Size(62, 25)
+        Me.posCashierID.TabIndex = 0
+        Me.posCashierID.Text = "#####"
+        Me.posCashierID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'posCashierName
+        '
+        Me.posCashierName.AutoSize = True
+        Me.posCashierName.BackColor = System.Drawing.Color.Transparent
+        Me.posCashierName.Font = New System.Drawing.Font("Bahnschrift SemiBold Condensed", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.posCashierName.Location = New System.Drawing.Point(640, 4)
+        Me.posCashierName.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.posCashierName.Name = "posCashierName"
+        Me.posCashierName.Size = New System.Drawing.Size(51, 25)
+        Me.posCashierName.TabIndex = 0
+        Me.posCashierName.Text = "Name"
+        Me.posCashierName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Label16
         '
         Me.Label16.AutoSize = True
@@ -409,6 +443,18 @@ Partial Class POSForm
         Me.Label15.Size = New System.Drawing.Size(28, 23)
         Me.Label15.TabIndex = 23
         Me.Label15.Text = "F2"
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.BackColor = System.Drawing.Color.Transparent
+        Me.Label28.Font = New System.Drawing.Font("Bahnschrift SemiBold Condensed", 16.0!, System.Drawing.FontStyle.Bold)
+        Me.Label28.Location = New System.Drawing.Point(571, 3)
+        Me.Label28.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(75, 27)
+        Me.Label28.TabIndex = 0
+        Me.Label28.Text = "Cashier :"
         '
         'Label14
         '
@@ -675,8 +721,8 @@ Partial Class POSForm
         Me.Panel2.Controls.Add(Me.Label9)
         Me.Panel2.Controls.Add(Me.TransNoTextBox)
         Me.Panel2.Controls.Add(Me.QuantityTextBox)
-        Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Controls.Add(Me.Label12)
+        Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Controls.Add(Me.Label8)
         Me.Panel2.Controls.Add(Me.ProdPriceTextBox)
         Me.Panel2.Controls.Add(Me.ProdCodeTextBox)
@@ -880,18 +926,6 @@ Partial Class POSForm
         Me.QuantityTextBox.Size = New System.Drawing.Size(117, 36)
         Me.QuantityTextBox.TabIndex = 16
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Bahnschrift SemiBold Condensed", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(5, 7)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(120, 25)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Transaction No."
-        '
         'Label12
         '
         Me.Label12.AutoSize = True
@@ -1025,6 +1059,31 @@ Partial Class POSForm
         Me.PictureBox1.TabIndex = 22
         Me.PictureBox1.TabStop = False
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Bahnschrift SemiBold Condensed", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(5, 7)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(153, 25)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "Transaction Number"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.BackColor = System.Drawing.Color.Transparent
+        Me.Label29.Font = New System.Drawing.Font("Bahnschrift SemiBold Condensed", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label29.Location = New System.Drawing.Point(1183, 6)
+        Me.Label29.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(43, 25)
+        Me.Label29.TabIndex = 2
+        Me.Label29.Text = "ID #:"
+        '
         'POSForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1060,7 +1119,7 @@ Partial Class POSForm
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Label2 As Label
+    Friend WithEvents posCashierName As Label
     Friend WithEvents Panel5 As Panel
     Friend WithEvents TotalAmountTextBox As TextBox
     Friend WithEvents Label4 As Label
@@ -1126,4 +1185,8 @@ Partial Class POSForm
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Label28 As Label
+    Friend WithEvents posCashierID As Label
+    Friend WithEvents Label29 As Label
+    Friend WithEvents Label2 As Label
 End Class

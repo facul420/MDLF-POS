@@ -106,6 +106,7 @@ Public Class POSForm
         ChangeTextBox.ReadOnly = True
         transactionNumber()
         TransDateTextBox.Text = DateTime.Now.ToString("MM/dd/yyyy")
+
     End Sub
     Private Sub displaydata()
         connect()

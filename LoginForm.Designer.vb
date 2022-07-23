@@ -30,7 +30,7 @@ Partial Class LoginForm
         Me.cmbCredentials = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.checkShowPass = New System.Windows.Forms.CheckBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.btnLogin = New Guna.UI2.WinForms.Guna2GradientButton()
@@ -143,19 +143,19 @@ Partial Class LoginForm
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Password:"
         '
-        'CheckBox1
+        'checkShowPass
         '
-        Me.CheckBox1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.BackColor = System.Drawing.Color.Transparent
-        Me.CheckBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.CheckBox1.Location = New System.Drawing.Point(138, 444)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(114, 19)
-        Me.CheckBox1.TabIndex = 4
-        Me.CheckBox1.Text = "Show Password"
-        Me.CheckBox1.UseVisualStyleBackColor = False
+        Me.checkShowPass.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.checkShowPass.AutoSize = True
+        Me.checkShowPass.BackColor = System.Drawing.Color.Transparent
+        Me.checkShowPass.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.checkShowPass.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.checkShowPass.Location = New System.Drawing.Point(138, 444)
+        Me.checkShowPass.Name = "checkShowPass"
+        Me.checkShowPass.Size = New System.Drawing.Size(114, 19)
+        Me.checkShowPass.TabIndex = 4
+        Me.checkShowPass.Text = "Show Password"
+        Me.checkShowPass.UseVisualStyleBackColor = False
         '
         'Label3
         '
@@ -286,7 +286,7 @@ Partial Class LoginForm
         Me.BackgroundImage = Global.MDLF_POS.My.Resources.Resources.newa
         Me.ClientSize = New System.Drawing.Size(478, 638)
         Me.Controls.Add(Me.btnLogin)
-        Me.Controls.Add(Me.CheckBox1)
+        Me.Controls.Add(Me.checkShowPass)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -314,7 +314,7 @@ Partial Class LoginForm
     Friend WithEvents cmbCredentials As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents checkShowPass As CheckBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents btnLogin As Guna.UI2.WinForms.Guna2GradientButton

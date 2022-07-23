@@ -31,11 +31,11 @@ Partial Class DashboardForm
         Me.LogoPanel = New System.Windows.Forms.Panel()
         Me.imgHome = New System.Windows.Forms.PictureBox()
         Me.TitleBarPanel = New System.Windows.Forms.Panel()
+        Me.IDTextBox = New System.Windows.Forms.TextBox()
         Me.labelHome = New System.Windows.Forms.Label()
         Me.IconCurrentFormIcon = New FontAwesome.Sharp.IconPictureBox()
         Me.panelDesktop = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.IDTextBox = New System.Windows.Forms.TextBox()
         Me.MenuPanel.SuspendLayout()
         Me.LogoPanel.SuspendLayout()
         CType(Me.imgHome, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -203,6 +203,16 @@ Partial Class DashboardForm
         Me.TitleBarPanel.Size = New System.Drawing.Size(1130, 50)
         Me.TitleBarPanel.TabIndex = 1
         '
+        'IDTextBox
+        '
+        Me.IDTextBox.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.IDTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.IDTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IDTextBox.Location = New System.Drawing.Point(1056, 12)
+        Me.IDTextBox.Name = "IDTextBox"
+        Me.IDTextBox.Size = New System.Drawing.Size(62, 19)
+        Me.IDTextBox.TabIndex = 2
+        '
         'labelHome
         '
         Me.labelHome.AutoSize = True
@@ -249,16 +259,6 @@ Partial Class DashboardForm
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
-        '
-        'IDTextBox
-        '
-        Me.IDTextBox.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.IDTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.IDTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.IDTextBox.Location = New System.Drawing.Point(1056, 12)
-        Me.IDTextBox.Name = "IDTextBox"
-        Me.IDTextBox.Size = New System.Drawing.Size(62, 19)
-        Me.IDTextBox.TabIndex = 2
         '
         'DashboardForm
         '

@@ -443,8 +443,8 @@ Public Class POSForm
 
     Private Sub OptionLabel1_KeyDown(sender As Object, e As KeyEventArgs) Handles OptionLabel1.KeyDown
         If e.KeyCode = Keys.F9 Then
-            SecurityForm02.Visible = True
-            SecurityForm02.txtUserName.Focus()
+            SecurityForm.Visible = True
+            SecurityForm.txtUserName.Focus()
         ElseIf e.KeyCode = Keys.A Then
             OptionLabel1.Visible = False
             AmountDueTextBox.Text = "0.00"

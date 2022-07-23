@@ -159,6 +159,7 @@
       <DependentUpon>DashboardForm.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="DatabaseModule.vb" />
     <Compile Include="POSForm.Designer.vb">
       <DependentUpon>POSForm.vb</DependentUpon>
     </Compile>
@@ -211,7 +212,6 @@
     <Compile Include="SubForms\AccountsSecurityForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SubForms\DatabaseModule.vb" />
     <Compile Include="SubForms\InventorySecurityForm.Designer.vb">
       <DependentUpon>InventorySecurityForm.vb</DependentUpon>
     </Compile>

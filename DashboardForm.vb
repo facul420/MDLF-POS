@@ -173,7 +173,24 @@ Public Class DashboardForm
         SalesSecurityForm.Visible = False
         InventorySecurityForm.Visible = False
         AccountsSecurityForm.Visible = False
+        If currentSubForm IsNot Nothing Then
+            currentSubForm.Close()
+        End If
+        Reset()
+
     End Sub
+
+    Private Sub DashboardForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        If CurrentCredentials = "Cashier" Then
+            btnAccount.Enabled = False
+            btnSales.Enabled = False
+            btnInventory.Enabled = False
+        End If
+
+    End Sub
+
+
 
 
 

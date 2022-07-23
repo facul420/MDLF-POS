@@ -12,6 +12,10 @@ Module DatabaseModule
     Public arrimage() As Byte
     Public sql As String
     Public dset As New DataSet
+    Public CurrentCredentials As String
+    Public CurrentUsername As String
+    Public CurrentName As String
+    Public CurrentID As String
     Public Sub Connect()
         Try
             conn = New MySqlConnection With {

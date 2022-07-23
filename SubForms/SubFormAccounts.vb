@@ -1,5 +1,4 @@
-﻿
-Imports MySql.Data.MySqlClient
+﻿Imports MySql.Data.MySqlClient
 Imports System.IO
 Imports System.Data
 
@@ -73,6 +72,7 @@ Public Class SubFormAccounts
             txtDate.Text = reader.GetString("Acc_DateofEmployment")
 
             AccShowPass.Checked = True
+            btnAddAcc.Enabled = False
         Catch ex As Exception
             MsgBox("Header Sorted", MsgBoxStyle.Information)
         End Try
@@ -86,6 +86,7 @@ Public Class SubFormAccounts
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         ClearFunction()
+        btnAddAcc.Enabled = True
     End Sub
 
 #Region "-----Functions-----"
@@ -133,6 +134,7 @@ Public Class SubFormAccounts
         txtDate.Clear()
         IdPicBoxAcc.Image = Nothing
         txtIdSearch.Clear()
+        txtID.Clear()
         lbID.Text = "#####"
         txtNameAcc.Focus()
 
@@ -170,7 +172,7 @@ Public Class SubFormAccounts
 
         Try
 
-            If txtNameAcc.Text.Trim() = "" OrElse cmbPosAcc.Text.Trim() = "" OrElse txtPassAcc.Text.Trim() = "" OrElse txtPassAcc.Text.Trim() = "" OrElse txtDate.Text.Trim() = "" OrElse lbID.Text.Trim() = "#####" Then
+            If txtNameAcc.Text.Trim() = "" OrElse cmbPosAcc.Text.Trim() = "" OrElse txtPassAcc.Text.Trim() = "" OrElse txtPassAcc.Text.Trim() = "" OrElse txtDate.Text.Trim() = "" OrElse lbID.Text.Trim() = "#####" OrElse lbID.Text.Trim() = "" Then
                 MessageBox.Show("Enter missing data", "Missing data", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 txtNameAcc.Focus()
 
@@ -273,6 +275,7 @@ Public Class SubFormAccounts
 
                 LoadDatabase()
                 ClearFunction()
+                btnAddAcc.Enabled = True
             End If
         Catch ex As Exception
             MsgBox("Please enter the right info" & ControlChars.NewLine & ex.Message, MsgBoxStyle.Exclamation)
@@ -281,8 +284,8 @@ Public Class SubFormAccounts
 
     Private Sub txtDeleteAcc_Click(sender As Object, e As EventArgs) Handles txtDeleteAcc.Click
         Try
-            If txtIdSearch.Text.Trim() = "" Then
-                MessageBox.Show("Please input the ID number", "Id number", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            If lbID.Text.Trim() = "#####" Then
+                MessageBox.Show("No Account Selected", "No account", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 txtIdSearch.Focus()
             Else
                 Connect()
@@ -298,6 +301,7 @@ Public Class SubFormAccounts
                 End With
                 ClearFunction()
                 LoadDatabase()
+                btnAddAcc.Enabled = True
                 MessageBox.Show("Account Deleted", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If
         Catch ex As Exception
@@ -346,6 +350,7 @@ Public Class SubFormAccounts
 
                 LoadDatabase()
                 txtIdSearch.Clear()
+                btnAddAcc.Enabled = False
 
             End If
         Catch ex As Exception

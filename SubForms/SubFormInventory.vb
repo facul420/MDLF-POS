@@ -179,11 +179,9 @@ Public Class SubFormInventory
     End Sub
 
     Private Sub ProdCodeTextBox_TextChanged(sender As Object, e As EventArgs) Handles SearchCodeTextBox.TextChanged
-        If Not IsNumeric(SearchCodeTextBox.Text) Then
-            SearchCodeTextBox.Clear()
-        Else
-            search()
-        End If
+
+        search()
+  
     End Sub
 
     Private Sub SaveButton_Click(sender As Object, e As EventArgs) Handles SaveButton.Click
@@ -203,6 +201,7 @@ Public Class SubFormInventory
         UnitInStockTextBox.Clear()
         AdditionalItemsTextBox.Clear()
         GenerateButton.Enabled = True
+        AddItemButton.Enabled = True
         SaveButton.Enabled = False
         DeleteButton.Enabled = False
     End Sub

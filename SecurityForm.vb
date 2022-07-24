@@ -1,28 +1,17 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class SecurityForm
+
+    Private Sub deleteTransaction()
+        Connect()
+        query = "DELETE FROM `tbl_ussales` WHERE `Transaction_Number`= '" & POSForm.TransNoTextBox.Text & "' "
+        command.CommandText = query
+        command.Connection = conn
+        command.Parameters.Clear()
+        command.ExecuteNonQuery()
+    End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        'If txtUserName.Text = "" Or txtPassword.Text = "" Then
-        '    MsgBox("Please enter username/password.", vbExclamation)
-        'ElseIf txtUserName.Text = "admin123" And txtPassword.Text = "pass123" Then
-        '    POSForm.ProdCodeTextBox.Clear()
-        '    POSForm.ProdNameTextBox.Clear()
-        '    POSForm.ProdPriceTextBox.Text = "0.00"
-        '    POSForm.QuantityTextBox.Clear()
-        '    POSForm.CashTextBox.Clear()
-        '    POSForm.AmountDueTextBox.Text = "0.00"
-        '    POSForm.TotalAmountTextBox.Text = "0.00"
-        '    POSForm.Cash2TextBox.Text = "0.00"
-        '    POSForm.ChangeTextBox.Text = "0.00"
-        '    POSForm.OptionLabel1.Visible = False
-        '    POSForm.dgItems.Rows.Clear()
-        '    POSForm.Visible = False
-        '    Me.Close()
-        '    DashboardForm.Visible = True
-        '    System.Windows.Forms.Cursor.Show()
-        'Else
-        '    MessageBox.Show("Wrong Credentials", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        'End If
+
         Try
             If txtUserName.Text.Trim() = "" OrElse txtPassword.Text.Trim() = "" Then
 
@@ -48,7 +37,7 @@ Public Class SecurityForm
                         MessageBox.Show("You are not authorized", "NOT AUTHROIZED", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                     Else
                         ResetLogin()
-
+                        deleteTransaction()
                         POSForm.ProdCodeTextBox.Clear()
                         POSForm.ProdNameTextBox.Clear()
                         POSForm.ProdPriceTextBox.Text = "0.00"
@@ -60,11 +49,9 @@ Public Class SecurityForm
                         POSForm.ChangeTextBox.Text = "0.00"
                         POSForm.OptionLabel1.Visible = False
                         POSForm.dgItems.Rows.Clear()
-                        POSForm.Visible = False
                         Me.Close()
-                        DashboardForm.Visible = True
-                        System.Windows.Forms.Cursor.Show()
-
+                        POSForm.ProdCodeTextBox.Enabled = True
+                        POSForm.ProdCodeTextBox.Focus()
                     End If
 
 
@@ -73,7 +60,7 @@ Public Class SecurityForm
 
 
                 Else
-                        MessageBox.Show("Wrong Credentials", "Wrong Data", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    MessageBox.Show("Wrong Credentials", "Wrong Data", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 End If
             End If
         Catch ex As Exception

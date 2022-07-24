@@ -30,7 +30,7 @@ Public Class POSForm
 
     Private Sub PD_BeginPrint(sender As Object, e As PrintEventArgs) Handles PD.BeginPrint
         Dim pagesetup As New PageSettings
-        pagesetup.PaperSize = New PaperSize("Custom", 250, longpaper)
+        pagesetup.PaperSize = New PaperSize("Custom", 350, longpaper)
         PD.DefaultPageSettings = pagesetup
     End Sub
     Private Sub PD_PrintPage(sender As Object, e As PrintPageEventArgs) Handles PD.PrintPage
@@ -58,8 +58,8 @@ Public Class POSForm
         e.Graphics.DrawString("Transaction Number :   " & TransNoTextBox.Text, f8, Brushes.Black, 0, 60)
         e.Graphics.DrawString("Transaction Date :   " & Date.Now(), f8, Brushes.Black, 0, 75)
         'add cashier name
-        e.Graphics.DrawString("Cashier: ", f8, Brushes.Black, 0, 90)
-        e.Graphics.DrawString(line, f8, Brushes.Black, 0, 105)
+        e.Graphics.DrawString("Cashier: " & posCashierName.Text, f8, Brushes.Black, 0, 90)
+        e.Graphics.DrawString(line, f8, Brushes.Black, 0, 110)
 
         Dim height As Integer
         Dim i As Long
@@ -67,23 +67,28 @@ Public Class POSForm
         dgItems.AllowUserToAddRows = False
 
         For row As Integer = 0 To dgItems.RowCount - 1
-            height += 15
-            e.Graphics.DrawString(dgItems.Rows(row).Cells(1).Value.ToString, f10, Brushes.Black, 0, 115 + height)
-            e.Graphics.DrawString(dgItems.Rows(row).Cells(0).Value.ToString, f10, Brushes.Black, 25, 115 + height)
+            height += 20
+            e.Graphics.DrawString(dgItems.Rows(row).Cells(0).Value.ToString, f8, Brushes.Black, 0, 120 + height)
+            e.Graphics.DrawString(dgItems.Rows(row).Cells(1).Value.ToString, f8, Brushes.Black, 70, 120 + height)
+            e.Graphics.DrawString(dgItems.Rows(row).Cells(2).Value.ToString, f8, Brushes.Black, 225, 120 + height)
+            e.Graphics.DrawString(dgItems.Rows(row).Cells(3).Value.ToString, f8, Brushes.Black, 30, 130 + height)
+            e.Graphics.DrawString(dgItems.Rows(row).Cells(4).Value.ToString, f8, Brushes.Black, 100, 130 + height)
+            e.Graphics.DrawString(dgItems.Rows(row).Cells(6).Value.ToString, f8, Brushes.Black, rightmargin, 130 + height, right)
 
-            i = dgItems.Rows(row).Cells(2).Value
-            dgItems.Rows(row).Cells(2).Value = Format(i, "##,##0")
-            e.Graphics.DrawString(dgItems.Rows(row).Cells(2).Value.ToString, f10, Brushes.Black, rightmargin, 115 + height, right)
         Next
 
         Dim height2 As Integer
         height2 = 125 + height
 
 
-        e.Graphics.DrawString(line, f8, Brushes.Black, 0, height2)
-        e.Graphics.DrawString("TOTAL AMOUNT:   " & TotalAmountTextBox.Text, f10, Brushes.Black, rightmargin, 10 + height2, right)
-        e.Graphics.DrawString("TOTAL ITEMS:   " & computeTotalItems(), f10, Brushes.Black, 0, 10 + height2)
-        e.Graphics.DrawString("Thanks For Shopping", f10, Brushes.Black, centermargin, 35 + height2, center)
+        e.Graphics.DrawString(line, f8, Brushes.Black, 0, 25 + height2)
+        e.Graphics.DrawString("TOTAL DISCOUNT: ", f8, Brushes.Black, 190, 30 + height2)
+        e.Graphics.DrawString(computeTotalDiscountRows(), f8, Brushes.Black, rightmargin, 30 + height2, right)
+        e.Graphics.DrawString("TOTAL AMOUNT: ", f8, Brushes.Black, 190, 50 + height2)
+        e.Graphics.DrawString(TotalAmountTextBox.Text, f8, Brushes.Black, rightmargin, 50 + height2, right)
+        e.Graphics.DrawString("TOTAL ITEMS: " & computeTotalItems(), f8, Brushes.Black, 0, 30 + height2)
+        e.Graphics.DrawString("Thanks For Shopping", f10, Brushes.Black, centermargin, 100 + height2, center)
+        e.Graphics.DrawString("MDLF POS", f10, Brushes.Black, centermargin, 120 + height2, center)
 
     End Sub
     'Functions
@@ -119,7 +124,7 @@ Public Class POSForm
 
         If reader.Read Then
             ProdNameTextBox.Text = reader.GetString("Product_Name")
-            ProdPriceTextBox.Text = String.Format("{0:F2}", reader.GetString("Product_Price"))
+            ProdPriceTextBox.Text = reader.GetString("Product_Price")
             UnitInStockTextBox.Text = reader.GetString("Unit_In_Stock")
             DiscountTextBox.Text = reader.GetString("Special_Discount")
             QuantityTextBox.Enabled = True
@@ -147,7 +152,7 @@ Public Class POSForm
                 transNumber = reader.Item("Transaction_Number") + 1
             End While
         End If
-        TransNoTextBox.Text = "000" + String.Concat(transNumber)
+        TransNoTextBox.Text = String.Concat(transNumber)
     End Sub
 
     Private Sub savingData()
@@ -188,7 +193,7 @@ Public Class POSForm
 
     Private Sub deleteUnitItem()
         connect()
-        query = "DELETE FROM `tbl_ussales` WHERE `Product_Code`= '" & ProdCodeTextBox.Text & "', `Product_Code`= '" & TransNoTextBox.Text & "' "
+        query = "DELETE FROM `tbl_ussales` WHERE `Product_Code`= '" & ProdCodeTextBox.Text & "', `Transaction_Number`= '" & TransNoTextBox.Text & "' "
         command.CommandText = query
         command.Connection = conn
     End Sub
@@ -204,7 +209,7 @@ Public Class POSForm
     End Function
     Private Sub addItem()
         updateminusStock()
-        dgItems.Rows.Add(ProdCodeTextBox.Text, ProdNameTextBox.Text, String.Format("{0:F2}", ProdPriceTextBox.Text), QuantityTextBox.Text, String.Format("{0:F2}", computeDiscount), unitsalestype, String.Format("{0:F2}", computeTotalPrice))
+        dgItems.Rows.Add(ProdCodeTextBox.Text, ProdNameTextBox.Text, ProdPriceTextBox.Text, QuantityTextBox.Text, computeDiscount, unitsalestype, computeTotalPrice)
         UnitInStockTextBox.Clear()
         ProdCodeTextBox.Clear()
         QuantityTextBox.Clear()
@@ -327,8 +332,9 @@ Public Class POSForm
             If dgItems.RowCount > 0 Then
                 MsgBox("Please cancel the transaction first", MsgBoxStyle.Exclamation)
             Else
-                SecurityForm.Visible = True
-                SecurityForm.txtUserName.Focus()
+                Me.Close()
+                DashboardForm.Visible = True
+                System.Windows.Forms.Cursor.Show()
             End If
             System.Windows.Forms.Cursor.Show()
         ElseIf e.KeyCode = Keys.F7 Then
@@ -397,7 +403,6 @@ Public Class POSForm
     Private Sub ChangeTextBox_KeyDown(sender As Object, e As KeyEventArgs) Handles ChangeTextBox.KeyDown
         If e.KeyCode = Keys.N Then
 
-            savingData()
             transactionNumber()
             TransDateTextBox.Text = DateTime.Now.ToString("MM/dd/yyyy")
             dgItems.Rows.Clear()
@@ -413,7 +418,8 @@ Public Class POSForm
             ProdCodeTextBox.Enabled = True
             ProdCodeTextBox.Focus()
             MsgBox("New Transaction Added Successfully", MsgBoxStyle.MsgBoxRight)
-        ElseIf e.keycode = keys.f6 Then
+        ElseIf e.KeyCode = Keys.F6 Then
+            savingData()
             print()
         End If
     End Sub

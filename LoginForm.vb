@@ -40,16 +40,7 @@ Public Class LoginForm
 
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        'If txtUserName.Text = "" Or txtPassword.Text = "" Then
-        '    MsgBox("Please enter username/password.", vbExclamation)
-        'ElseIf txtUserName.Text = "admin123" And txtPassword.Text = "pass123" And cmbCredentials.Text = "Admin" Then
-        '    Me.Visible = False
-        '    DashboardForm.Visible = True
-        '    ResetLogin()
-        '    DashboardForm.LogoPanel.Focus()
-        'Else
-        '    MessageBox.Show("Wrong Credentials", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        'End If
+
         Try
             If txtUserName.Text.Trim() = "" OrElse txtPassword.Text.Trim() = "" OrElse cmbCredentials.Text.Trim() = "" Then
                 MessageBox.Show("Missing Credentials", "No Data", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -69,12 +60,13 @@ Public Class LoginForm
                 reader = command.ExecuteReader
 
                 If reader.Read() Then
-                    CurrentID = reader.GetString("Acc_Id")
-                    CurrentName = reader.GetString("Acc_Name")
+                    'CurrentID = reader.GetString("Acc_Id")
+                    'CurrentName = reader.GetString("Acc_Name")
+                    'CurrentUsername = reader.GetString("Acc_Username")
                     CurrentCredentials = reader.GetString("Acc_Position")
-                    CurrentUsername = reader.GetString("Acc_Username")
-                    POSForm.posCashierID.Text = CurrentID
-                    POSForm.posCashierName.Text = CurrentName
+
+                    'POSForm.posCashierID.Text = CurrentID
+                    'POSForm.posCashierName.Text = CurrentName
                     Me.Visible = False
                     DashboardForm.Visible = True
                     ResetLogin()

@@ -16,6 +16,11 @@ Module DatabaseModule
     Public CurrentUsername As String
     Public CurrentName As String
     Public CurrentID As String
+
+    Public inv As Boolean = False
+    Public acc As Boolean = False
+    Public sales As Boolean = False
+
     Public Sub Connect()
         Try
             conn = New MySqlConnection With {

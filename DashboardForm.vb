@@ -63,29 +63,44 @@ Public Class DashboardForm
 
 #Region "====== Button-Clicks-Change ======"
     Private Sub btnInventory_Click(sender As Object, e As EventArgs) Handles btnInventory.Click
+        inv = True
         ActiveButton(sender, Color.FromArgb(236, 164, 0))
-        InventorySecurityForm.Visible = True
-        AccountsSecurityForm.Visible = False
-        SalesSecurityForm.Visible = False
+        'InventorySecurityForm.Visible = True
+        'AccountsSecurityForm.Visible = False
+        'SalesSecurityForm.Visible = False
+        SubFormSecurity.Visible = True
+        sales = False
+        acc = False
     End Sub
 
     Private Sub btnSales_Click(sender As Object, e As EventArgs) Handles btnSales.Click
+        sales = True
         ActiveButton(sender, Color.FromArgb(236, 164, 0))
-        SalesSecurityForm.Visible = True
-        InventorySecurityForm.Visible = False
-        AccountsSecurityForm.Visible = False
+        'SalesSecurityForm.Visible = True
+        'InventorySecurityForm.Visible = False
+        'AccountsSecurityForm.Visible = False
+        SubFormSecurity.Visible = True
+        acc = False
+        inv = False
     End Sub
 
     Private Sub btnAccount_Click(sender As Object, e As EventArgs) Handles btnAccount.Click
+        acc = True
         ActiveButton(sender, Color.FromArgb(236, 164, 0))
-        AccountsSecurityForm.Visible = True
-        SalesSecurityForm.Visible = False
-        InventorySecurityForm.Visible = False
+        'AccountsSecurityForm.Visible = True
+        'SalesSecurityForm.Visible = False
+        'InventorySecurityForm.Visible = False
+        SubFormSecurity.Visible = True
+        sales = False
+        inv = False
     End Sub
 
     Private Sub imgHome_Click(sender As Object, e As EventArgs) Handles imgHome.Click
         If currentSubForm IsNot Nothing Then
             currentSubForm.Close()
+            sales = False
+            acc = False
+            inv = False
         End If
         Reset()
     End Sub
@@ -170,9 +185,7 @@ Public Class DashboardForm
 
     Private Sub btnPOS_Click(sender As Object, e As EventArgs) Handles btnPOS.Click
         POSSecurityForm.Visible = True
-        SalesSecurityForm.Visible = False
-        InventorySecurityForm.Visible = False
-        AccountsSecurityForm.Visible = False
+
         If currentSubForm IsNot Nothing Then
             currentSubForm.Close()
         End If

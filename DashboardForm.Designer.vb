@@ -22,27 +22,29 @@ Partial Class DashboardForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DashboardForm))
         Me.MenuPanel = New System.Windows.Forms.Panel()
+        Me.LogoPanel = New System.Windows.Forms.Panel()
+        Me.TitleBarPanel = New System.Windows.Forms.Panel()
+        Me.IDTextBox = New System.Windows.Forms.TextBox()
+        Me.labelHome = New System.Windows.Forms.Label()
+        Me.panelDesktop = New System.Windows.Forms.Panel()
+        Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.IconCurrentFormIcon = New FontAwesome.Sharp.IconPictureBox()
         Me.btnLogout = New FontAwesome.Sharp.IconButton()
         Me.btnPOS = New FontAwesome.Sharp.IconButton()
         Me.btnAccount = New FontAwesome.Sharp.IconButton()
         Me.btnSales = New FontAwesome.Sharp.IconButton()
         Me.btnInventory = New FontAwesome.Sharp.IconButton()
-        Me.LogoPanel = New System.Windows.Forms.Panel()
         Me.imgHome = New System.Windows.Forms.PictureBox()
-        Me.TitleBarPanel = New System.Windows.Forms.Panel()
-        Me.IDTextBox = New System.Windows.Forms.TextBox()
-        Me.labelHome = New System.Windows.Forms.Label()
-        Me.IconCurrentFormIcon = New FontAwesome.Sharp.IconPictureBox()
-        Me.panelDesktop = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.MenuPanel.SuspendLayout()
         Me.LogoPanel.SuspendLayout()
-        CType(Me.imgHome, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TitleBarPanel.SuspendLayout()
-        CType(Me.IconCurrentFormIcon, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelDesktop.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.IconCurrentFormIcon, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.imgHome, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuPanel
@@ -60,6 +62,95 @@ Partial Class DashboardForm
         Me.MenuPanel.Name = "MenuPanel"
         Me.MenuPanel.Size = New System.Drawing.Size(220, 726)
         Me.MenuPanel.TabIndex = 0
+        '
+        'LogoPanel
+        '
+        Me.LogoPanel.Controls.Add(Me.imgHome)
+        Me.LogoPanel.Dock = System.Windows.Forms.DockStyle.Top
+        Me.LogoPanel.Location = New System.Drawing.Point(0, 0)
+        Me.LogoPanel.Name = "LogoPanel"
+        Me.LogoPanel.Size = New System.Drawing.Size(220, 162)
+        Me.LogoPanel.TabIndex = 0
+        '
+        'TitleBarPanel
+        '
+        Me.TitleBarPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.TitleBarPanel.Controls.Add(Me.IDTextBox)
+        Me.TitleBarPanel.Controls.Add(Me.labelHome)
+        Me.TitleBarPanel.Controls.Add(Me.IconCurrentFormIcon)
+        Me.TitleBarPanel.Dock = System.Windows.Forms.DockStyle.Top
+        Me.TitleBarPanel.Location = New System.Drawing.Point(220, 0)
+        Me.TitleBarPanel.Name = "TitleBarPanel"
+        Me.TitleBarPanel.Size = New System.Drawing.Size(1130, 50)
+        Me.TitleBarPanel.TabIndex = 1
+        '
+        'IDTextBox
+        '
+        Me.IDTextBox.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.IDTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.IDTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IDTextBox.Location = New System.Drawing.Point(1056, 12)
+        Me.IDTextBox.Name = "IDTextBox"
+        Me.IDTextBox.Size = New System.Drawing.Size(62, 19)
+        Me.IDTextBox.TabIndex = 2
+        '
+        'labelHome
+        '
+        Me.labelHome.AutoSize = True
+        Me.labelHome.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labelHome.ForeColor = System.Drawing.Color.Gainsboro
+        Me.labelHome.Location = New System.Drawing.Point(75, 19)
+        Me.labelHome.Name = "labelHome"
+        Me.labelHome.Size = New System.Drawing.Size(64, 22)
+        Me.labelHome.TabIndex = 1
+        Me.labelHome.Text = "Home"
+        '
+        'panelDesktop
+        '
+        Me.panelDesktop.AutoSize = True
+        Me.panelDesktop.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.panelDesktop.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(110, Byte), Integer))
+        Me.panelDesktop.Controls.Add(Me.Guna2HtmlLabel1)
+        Me.panelDesktop.Controls.Add(Me.PictureBox1)
+        Me.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.panelDesktop.Location = New System.Drawing.Point(220, 50)
+        Me.panelDesktop.Name = "panelDesktop"
+        Me.panelDesktop.Size = New System.Drawing.Size(1130, 676)
+        Me.panelDesktop.TabIndex = 2
+        '
+        'Guna2HtmlLabel1
+        '
+        Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(483, 396)
+        Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
+        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(215, 88)
+        Me.Guna2HtmlLabel1.TabIndex = 3
+        Me.Guna2HtmlLabel1.Text = resources.GetString("Guna2HtmlLabel1.Text")
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.PictureBox1.Image = Global.MDLF_POS.My.Resources.Resources.homepagelogo
+        Me.PictureBox1.Location = New System.Drawing.Point(355, 181)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(454, 258)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
+        '
+        'IconCurrentFormIcon
+        '
+        Me.IconCurrentFormIcon.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.IconCurrentFormIcon.ForeColor = System.Drawing.Color.Gainsboro
+        Me.IconCurrentFormIcon.IconChar = FontAwesome.Sharp.IconChar.Home
+        Me.IconCurrentFormIcon.IconColor = System.Drawing.Color.Gainsboro
+        Me.IconCurrentFormIcon.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconCurrentFormIcon.IconSize = 37
+        Me.IconCurrentFormIcon.Location = New System.Drawing.Point(26, 11)
+        Me.IconCurrentFormIcon.Name = "IconCurrentFormIcon"
+        Me.IconCurrentFormIcon.Size = New System.Drawing.Size(43, 37)
+        Me.IconCurrentFormIcon.TabIndex = 0
+        Me.IconCurrentFormIcon.TabStop = False
         '
         'btnLogout
         '
@@ -172,15 +263,6 @@ Partial Class DashboardForm
         Me.btnInventory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnInventory.UseVisualStyleBackColor = True
         '
-        'LogoPanel
-        '
-        Me.LogoPanel.Controls.Add(Me.imgHome)
-        Me.LogoPanel.Dock = System.Windows.Forms.DockStyle.Top
-        Me.LogoPanel.Location = New System.Drawing.Point(0, 0)
-        Me.LogoPanel.Name = "LogoPanel"
-        Me.LogoPanel.Size = New System.Drawing.Size(220, 162)
-        Me.LogoPanel.TabIndex = 0
-        '
         'imgHome
         '
         Me.imgHome.Image = Global.MDLF_POS.My.Resources.Resources.logo
@@ -190,75 +272,6 @@ Partial Class DashboardForm
         Me.imgHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.imgHome.TabIndex = 0
         Me.imgHome.TabStop = False
-        '
-        'TitleBarPanel
-        '
-        Me.TitleBarPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(74, Byte), Integer))
-        Me.TitleBarPanel.Controls.Add(Me.IDTextBox)
-        Me.TitleBarPanel.Controls.Add(Me.labelHome)
-        Me.TitleBarPanel.Controls.Add(Me.IconCurrentFormIcon)
-        Me.TitleBarPanel.Dock = System.Windows.Forms.DockStyle.Top
-        Me.TitleBarPanel.Location = New System.Drawing.Point(220, 0)
-        Me.TitleBarPanel.Name = "TitleBarPanel"
-        Me.TitleBarPanel.Size = New System.Drawing.Size(1130, 50)
-        Me.TitleBarPanel.TabIndex = 1
-        '
-        'IDTextBox
-        '
-        Me.IDTextBox.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.IDTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.IDTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.IDTextBox.Location = New System.Drawing.Point(1056, 12)
-        Me.IDTextBox.Name = "IDTextBox"
-        Me.IDTextBox.Size = New System.Drawing.Size(62, 19)
-        Me.IDTextBox.TabIndex = 2
-        '
-        'labelHome
-        '
-        Me.labelHome.AutoSize = True
-        Me.labelHome.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.labelHome.ForeColor = System.Drawing.Color.Gainsboro
-        Me.labelHome.Location = New System.Drawing.Point(75, 19)
-        Me.labelHome.Name = "labelHome"
-        Me.labelHome.Size = New System.Drawing.Size(64, 22)
-        Me.labelHome.TabIndex = 1
-        Me.labelHome.Text = "Home"
-        '
-        'IconCurrentFormIcon
-        '
-        Me.IconCurrentFormIcon.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(74, Byte), Integer))
-        Me.IconCurrentFormIcon.ForeColor = System.Drawing.Color.Gainsboro
-        Me.IconCurrentFormIcon.IconChar = FontAwesome.Sharp.IconChar.Home
-        Me.IconCurrentFormIcon.IconColor = System.Drawing.Color.Gainsboro
-        Me.IconCurrentFormIcon.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconCurrentFormIcon.IconSize = 37
-        Me.IconCurrentFormIcon.Location = New System.Drawing.Point(26, 11)
-        Me.IconCurrentFormIcon.Name = "IconCurrentFormIcon"
-        Me.IconCurrentFormIcon.Size = New System.Drawing.Size(43, 37)
-        Me.IconCurrentFormIcon.TabIndex = 0
-        Me.IconCurrentFormIcon.TabStop = False
-        '
-        'panelDesktop
-        '
-        Me.panelDesktop.AutoSize = True
-        Me.panelDesktop.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.panelDesktop.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(110, Byte), Integer))
-        Me.panelDesktop.Controls.Add(Me.PictureBox1)
-        Me.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.panelDesktop.Location = New System.Drawing.Point(220, 50)
-        Me.panelDesktop.Name = "panelDesktop"
-        Me.panelDesktop.Size = New System.Drawing.Size(1130, 676)
-        Me.panelDesktop.TabIndex = 2
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PictureBox1.Location = New System.Drawing.Point(311, 190)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(454, 258)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
         '
         'DashboardForm
         '
@@ -275,12 +288,13 @@ Partial Class DashboardForm
         Me.Text = "Form1"
         Me.MenuPanel.ResumeLayout(False)
         Me.LogoPanel.ResumeLayout(False)
-        CType(Me.imgHome, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TitleBarPanel.ResumeLayout(False)
         Me.TitleBarPanel.PerformLayout()
-        CType(Me.IconCurrentFormIcon, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelDesktop.ResumeLayout(False)
+        Me.panelDesktop.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.IconCurrentFormIcon, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.imgHome, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -300,4 +314,5 @@ Partial Class DashboardForm
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents btnLogout As FontAwesome.Sharp.IconButton
     Friend WithEvents IDTextBox As TextBox
+    Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
 End Class

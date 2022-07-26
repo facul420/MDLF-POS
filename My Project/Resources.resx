@@ -118,85 +118,88 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="icons8-close-501" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\pngs\icons8-close-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tmp_e51db86c-1e4d-452b-8d2e-e96f2d04bd5d" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Project imgs\tmp_e51db86c-1e4d-452b-8d2e-e96f2d04bd5d.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bga1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bga1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tmp_fc623ef7-538d-41e7-b644-9459410f60cd" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Project imgs\tmp_fc623ef7-538d-41e7-b644-9459410f60cd.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="lock-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\pngs\lock-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="user-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pngs\user-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tmp_063a8c9f-a4a3-40b1-b0f4-8fdf75f09d80" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Project imgs\tmp_063a8c9f-a4a3-40b1-b0f4-8fdf75f09d80.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="2761118" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Project imgs\2761118.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tmp_386049df-2464-4f45-9490-8846d12ae663" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Project imgs\tmp_386049df-2464-4f45-9490-8846d12ae663.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tmp_4d26b04a-98e3-4173-b7b5-ff716bea1303" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Project imgs\tmp_4d26b04a-98e3-4173-b7b5-ff716bea1303.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-maximize-49" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\pngs\icons8-maximize-49.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\pngs\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tmp_e51db86c-1e4d-452b-8d2e-e96f2d04bd5d" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Project imgs\tmp_e51db86c-1e4d-452b-8d2e-e96f2d04bd5d.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tmp_0fca0232-4ab2-49a8-8edc-83ad0f497439" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Project imgs\tmp_0fca0232-4ab2-49a8-8edc-83ad0f497439.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bganw" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bganw.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tmp_e8cadce8-4482-4084-a3b2-5648923074d8" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Project imgs\tmp_e8cadce8-4482-4084-a3b2-5648923074d8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bga" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bga.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-close-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="tmp_29262183-062a-4371-a475-039af9961378" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Project imgs\tmp_29262183-062a-4371-a475-039af9961378.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lock-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pngs\lock-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-close-501" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pngs\icons8-close-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tmp_bea683d6-04e8-44aa-8aed-ac4e53914c1c" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Project imgs\tmp_bea683d6-04e8-44aa-8aed-ac4e53914c1c.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tmp_9692ba1a-07fa-466a-8e2e-773e28bb2309" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Project imgs\tmp_9692ba1a-07fa-466a-8e2e-773e28bb2309.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pngs\user-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pngs\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tmp_0fca0232-4ab2-49a8-8edc-83ad0f497439" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Project imgs\tmp_0fca0232-4ab2-49a8-8edc-83ad0f497439.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="tmp_bed89516-c393-4330-a4eb-0b8af0031608" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Project imgs\tmp_bed89516-c393-4330-a4eb-0b8af0031608.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tmp_d47540ea-fd2a-4b5c-b81a-744ab0a9f530" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Project imgs\tmp_d47540ea-fd2a-4b5c-b81a-744ab0a9f530.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-maximize-49" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pngs\icons8-maximize-49.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="2761118" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Project imgs\2761118.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tmp_4d26b04a-98e3-4173-b7b5-ff716bea1303" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Project imgs\tmp_4d26b04a-98e3-4173-b7b5-ff716bea1303.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tmp_386049df-2464-4f45-9490-8846d12ae663" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Project imgs\tmp_386049df-2464-4f45-9490-8846d12ae663.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tmp_e8cadce8-4482-4084-a3b2-5648923074d8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Project imgs\tmp_e8cadce8-4482-4084-a3b2-5648923074d8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="281890674_553659539643497_5752982314944160653_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pngs\281890674_553659539643497_5752982314944160653_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tmp_58af9880-1a3a-403f-9bbc-214b3836f114" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Project imgs\tmp_58af9880-1a3a-403f-9bbc-214b3836f114.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tmp_29262183-062a-4371-a475-039af9961378" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Project imgs\tmp_29262183-062a-4371-a475-039af9961378.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bga1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bga1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-subtract-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pngs\icons8-subtract-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="newa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\newa.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bganw" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bganw.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tmp_bea683d6-04e8-44aa-8aed-ac4e53914c1c" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Project imgs\tmp_bea683d6-04e8-44aa-8aed-ac4e53914c1c.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tmp_58af9880-1a3a-403f-9bbc-214b3836f114" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Project imgs\tmp_58af9880-1a3a-403f-9bbc-214b3836f114.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tmp_d47540ea-fd2a-4b5c-b81a-744ab0a9f530" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Project imgs\tmp_d47540ea-fd2a-4b5c-b81a-744ab0a9f530.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-close-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pngs\icons8-close-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tmp_9692ba1a-07fa-466a-8e2e-773e28bb2309" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Project imgs\tmp_9692ba1a-07fa-466a-8e2e-773e28bb2309.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tmp_063a8c9f-a4a3-40b1-b0f4-8fdf75f09d80" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Project imgs\tmp_063a8c9f-a4a3-40b1-b0f4-8fdf75f09d80.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="homepagelogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pngs\homepagelogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

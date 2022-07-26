@@ -31,9 +31,11 @@ Public Class SecurityForm
                 reader = command.ExecuteReader
 
                 If reader.Read() Then
-                    Dim user As String
-                    user = reader.GetString("Acc_Username")
-                    If user.Equals(CurrentUsername) Then
+                    Dim cred As String
+                    cred = reader.GetString("Acc_Position")
+                    If cred.Equals("Cashier") Then
+                        MessageBox.Show("You are not authorized", "NOT AUTHROIZED", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    Else
                         ResetLogin()
                         deleteTransaction()
                         POSForm.ProdCodeTextBox.Clear()
@@ -50,9 +52,6 @@ Public Class SecurityForm
                         Me.Close()
                         POSForm.ProdCodeTextBox.Enabled = True
                         POSForm.ProdCodeTextBox.Focus()
-
-                    Else
-                        MessageBox.Show("You are not authorized", "NOT AUTHROIZED", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                     End If
 
 

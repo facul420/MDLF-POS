@@ -317,6 +317,7 @@ Partial Class SubFormAccounts
         '
         'txtID
         '
+        Me.txtID.Enabled = False
         Me.txtID.Font = New System.Drawing.Font("Bahnschrift Condensed", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtID.Location = New System.Drawing.Point(282, 30)
         Me.txtID.Margin = New System.Windows.Forms.Padding(2)

@@ -59,6 +59,9 @@ Partial Class SubFormInventory
         'DGInventory
         '
         Me.DGInventory.AllowUserToAddRows = False
+        Me.DGInventory.AllowUserToDeleteRows = False
+        Me.DGInventory.AllowUserToResizeColumns = False
+        Me.DGInventory.AllowUserToResizeRows = False
         Me.DGInventory.BackgroundColor = System.Drawing.Color.WhiteSmoke
         Me.DGInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGInventory.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.prodCode, Me.prodType, Me.prodName, Me.prodPrice, Me.prodSpecialDiscount, Me.itemsLeft})
@@ -183,7 +186,6 @@ Partial Class SubFormInventory
         '
         Me.ClearButton.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.ClearButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.ClearButton.Enabled = False
         Me.ClearButton.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
         Me.ClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ClearButton.Font = New System.Drawing.Font("Bahnschrift Condensed", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))

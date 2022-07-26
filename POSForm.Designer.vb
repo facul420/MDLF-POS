@@ -36,6 +36,7 @@ Partial Class POSForm
         Me.AmountDueButton = New System.Windows.Forms.Button()
         Me.CancelButton = New System.Windows.Forms.Button()
         Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label29 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
@@ -83,6 +84,7 @@ Partial Class POSForm
         Me.TransNoTextBox = New System.Windows.Forms.TextBox()
         Me.QuantityTextBox = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.ProdPriceTextBox = New System.Windows.Forms.TextBox()
         Me.ProdCodeTextBox = New System.Windows.Forms.TextBox()
@@ -94,8 +96,6 @@ Partial Class POSForm
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.OvalShape1 = New Microsoft.VisualBasic.PowerPacks.OvalShape()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label29 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.dgItems, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -340,6 +340,18 @@ Partial Class POSForm
         Me.Label21.TabIndex = 29
         Me.Label21.Text = "F8"
         '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.BackColor = System.Drawing.Color.Transparent
+        Me.Label29.Font = New System.Drawing.Font("Bahnschrift SemiBold Condensed", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label29.Location = New System.Drawing.Point(1183, 6)
+        Me.Label29.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(43, 25)
+        Me.Label29.TabIndex = 2
+        Me.Label29.Text = "ID #:"
+        '
         'Label20
         '
         Me.Label20.AutoSize = True
@@ -542,6 +554,9 @@ Partial Class POSForm
         'dgItems
         '
         Me.dgItems.AllowUserToAddRows = False
+        Me.dgItems.AllowUserToDeleteRows = False
+        Me.dgItems.AllowUserToResizeColumns = False
+        Me.dgItems.AllowUserToResizeRows = False
         Me.dgItems.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgItems.BackgroundColor = System.Drawing.Color.White
         Me.dgItems.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.prodcode, Me.Column1, Me.Column2, Me.Column3, Me.Column5, Me.Column6, Me.Column4})
@@ -938,6 +953,19 @@ Partial Class POSForm
         Me.Label12.TabIndex = 15
         Me.Label12.Text = "Quantity"
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Bahnschrift SemiBold Condensed", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(5, 7)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(153, 25)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "Transaction Number"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Label8
         '
         Me.Label8.AutoSize = True
@@ -1058,31 +1086,6 @@ Partial Class POSForm
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 22
         Me.PictureBox1.TabStop = False
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Bahnschrift SemiBold Condensed", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(5, 7)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(153, 25)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Transaction Number"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label29
-        '
-        Me.Label29.AutoSize = True
-        Me.Label29.BackColor = System.Drawing.Color.Transparent
-        Me.Label29.Font = New System.Drawing.Font("Bahnschrift SemiBold Condensed", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.Location = New System.Drawing.Point(1183, 6)
-        Me.Label29.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(43, 25)
-        Me.Label29.TabIndex = 2
-        Me.Label29.Text = "ID #:"
         '
         'POSForm
         '

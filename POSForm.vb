@@ -119,7 +119,7 @@ Public Class POSForm
         command.CommandText = query
         command.Connection = conn
         command.Parameters.Clear()
-        command.Parameters.Add("@productcode", MySqlDbType.Int16).Value = ProdCodeTextBox.Text.Trim
+        command.Parameters.Add("@productcode", MySqlDbType.Int64).Value = ProdCodeTextBox.Text.Trim
         reader = command.ExecuteReader
 
         If reader.Read Then
@@ -383,6 +383,7 @@ Public Class POSForm
             ProdCodeTextBox.Clear()
             QuantityTextBox.Clear()
             ProdNameTextBox.Clear()
+            UnitInStockTextBox.Clear()
             ProdPriceTextBox.Text = "0.00"
             QuantityTextBox.Enabled = False
             ProdCodeTextBox.Enabled = True
@@ -516,6 +517,7 @@ Public Class POSForm
                 Dim index As Integer
                 index = dgItems.CurrentCell.RowIndex
                 dgItems.Rows.RemoveAt(index)
+                ProdCodeTextBox.Focus()
                 deleteUnitItem()
                 updateoriginStock()
                 ProdCodeTextBox.Clear()
@@ -523,8 +525,8 @@ Public Class POSForm
                 ProdNameTextBox.Clear()
                 ProdPriceTextBox.Text = "0.00"
                 UnitInStockTextBox.Clear()
-                ProdCodeTextBox.Focus()
                 AmountDueTextBox.Text = amountDue()
+
             Else
                 UnitInStockTextBox.Enabled = False
                 ProdCodeTextBox.Clear()

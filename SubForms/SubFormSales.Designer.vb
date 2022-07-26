@@ -22,15 +22,9 @@ Partial Class SubFormSales
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DGGeneralSales = New System.Windows.Forms.DataGridView()
-        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.SearchTextBox = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -55,16 +49,22 @@ Partial Class SubFormSales
         Me.TSUnitAmountTextBox = New System.Windows.Forms.TextBox()
         Me.TSUnitDiscountTextBox = New System.Windows.Forms.TextBox()
         Me.DGUnitSales = New System.Windows.Forms.DataGridView()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.USTotalUnitTextBox = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DGGeneralSales, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -77,14 +77,15 @@ Partial Class SubFormSales
         Me.DGGeneralSales.AllowUserToResizeColumns = False
         Me.DGGeneralSales.AllowUserToResizeRows = False
         Me.DGGeneralSales.BackgroundColor = System.Drawing.Color.Khaki
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.Coral
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Bahnschrift SemiCondensed", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGGeneralSales.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.Coral
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Bahnschrift SemiCondensed", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGGeneralSales.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.DGGeneralSales.ColumnHeadersHeight = 35
         Me.DGGeneralSales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.DGGeneralSales.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column7, Me.Column8, Me.Column9, Me.Column10, Me.Column12, Me.Column11})
         Me.DGGeneralSales.Cursor = System.Windows.Forms.Cursors.Default
@@ -97,61 +98,6 @@ Partial Class SubFormSales
         Me.DGGeneralSales.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DGGeneralSales.Size = New System.Drawing.Size(492, 396)
         Me.DGGeneralSales.TabIndex = 0
-        '
-        'Column7
-        '
-        Me.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column7.HeaderText = "Transaction Number"
-        Me.Column7.MinimumWidth = 90
-        Me.Column7.Name = "Column7"
-        Me.Column7.ReadOnly = True
-        Me.Column7.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        '
-        'Column8
-        '
-        Me.Column8.FillWeight = 355.0724!
-        Me.Column8.HeaderText = "Transaction Date"
-        Me.Column8.MinimumWidth = 150
-        Me.Column8.Name = "Column8"
-        Me.Column8.ReadOnly = True
-        Me.Column8.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Column8.Width = 150
-        '
-        'Column9
-        '
-        Me.Column9.FillWeight = 36.23189!
-        Me.Column9.HeaderText = "Total Items"
-        Me.Column9.Name = "Column9"
-        Me.Column9.ReadOnly = True
-        Me.Column9.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Column9.Width = 106
-        '
-        'Column10
-        '
-        Me.Column10.FillWeight = 36.23189!
-        Me.Column10.HeaderText = "Total Discount"
-        Me.Column10.Name = "Column10"
-        Me.Column10.ReadOnly = True
-        Me.Column10.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Column10.Width = 126
-        '
-        'Column12
-        '
-        Me.Column12.FillWeight = 36.23189!
-        Me.Column12.HeaderText = "Cash"
-        Me.Column12.Name = "Column12"
-        Me.Column12.ReadOnly = True
-        Me.Column12.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Column12.Width = 71
-        '
-        'Column11
-        '
-        Me.Column11.FillWeight = 36.23189!
-        Me.Column11.HeaderText = "Total Amount"
-        Me.Column11.Name = "Column11"
-        Me.Column11.ReadOnly = True
-        Me.Column11.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Column11.Width = 121
         '
         'Label8
         '
@@ -431,14 +377,15 @@ Partial Class SubFormSales
         Me.DGUnitSales.AllowUserToResizeColumns = False
         Me.DGUnitSales.AllowUserToResizeRows = False
         Me.DGUnitSales.BackgroundColor = System.Drawing.Color.SandyBrown
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.Coral
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Bahnschrift SemiCondensed", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGUnitSales.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.Coral
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Bahnschrift SemiCondensed", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGUnitSales.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.DGUnitSales.ColumnHeadersHeight = 35
         Me.DGUnitSales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.DGUnitSales.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column13, Me.Column2, Me.Column14, Me.Column3, Me.Column4, Me.Column5, Me.Column6})
         Me.DGUnitSales.Location = New System.Drawing.Point(20, 96)
@@ -450,71 +397,6 @@ Partial Class SubFormSales
         Me.DGUnitSales.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DGUnitSales.Size = New System.Drawing.Size(517, 396)
         Me.DGUnitSales.TabIndex = 0
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "Transaction #"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        Me.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Column1.Width = 98
-        '
-        'Column13
-        '
-        Me.Column13.HeaderText = "Transaction Date"
-        Me.Column13.MinimumWidth = 150
-        Me.Column13.Name = "Column13"
-        Me.Column13.ReadOnly = True
-        Me.Column13.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Column13.Width = 150
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Product Code"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        Me.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Column2.Width = 96
-        '
-        'Column14
-        '
-        Me.Column14.HeaderText = "Product Name"
-        Me.Column14.MinimumWidth = 250
-        Me.Column14.Name = "Column14"
-        Me.Column14.ReadOnly = True
-        Me.Column14.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Column14.Width = 250
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Unit Sold"
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        Me.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Column3.Width = 75
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "Total Discount"
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
-        Me.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "Total Amount"
-        Me.Column5.Name = "Column5"
-        Me.Column5.ReadOnly = True
-        Me.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Column5.Width = 96
-        '
-        'Column6
-        '
-        Me.Column6.HeaderText = "Sales Type"
-        Me.Column6.Name = "Column6"
-        Me.Column6.ReadOnly = True
-        Me.Column6.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Column6.Width = 83
         '
         'USTotalUnitTextBox
         '
@@ -537,6 +419,139 @@ Partial Class SubFormSales
         Me.Label9.Size = New System.Drawing.Size(100, 23)
         Me.Label9.TabIndex = 6
         Me.Label9.Text = "Total Unit Sold"
+        '
+        'Column7
+        '
+        Me.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.Column7.HeaderText = "Transaction Number"
+        Me.Column7.MinimumWidth = 90
+        Me.Column7.Name = "Column7"
+        Me.Column7.ReadOnly = True
+        Me.Column7.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Column7.Width = 107
+        '
+        'Column8
+        '
+        Me.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.Column8.FillWeight = 355.0724!
+        Me.Column8.HeaderText = "Transaction Date"
+        Me.Column8.MinimumWidth = 100
+        Me.Column8.Name = "Column8"
+        Me.Column8.ReadOnly = True
+        Me.Column8.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        '
+        'Column9
+        '
+        Me.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.Column9.FillWeight = 36.23189!
+        Me.Column9.HeaderText = "Total Items"
+        Me.Column9.Name = "Column9"
+        Me.Column9.ReadOnly = True
+        Me.Column9.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Column9.Width = 73
+        '
+        'Column10
+        '
+        Me.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.Column10.FillWeight = 36.23189!
+        Me.Column10.HeaderText = "Total Discount"
+        Me.Column10.Name = "Column10"
+        Me.Column10.ReadOnly = True
+        Me.Column10.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Column10.Width = 84
+        '
+        'Column12
+        '
+        Me.Column12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.Column12.FillWeight = 36.23189!
+        Me.Column12.HeaderText = "Cash"
+        Me.Column12.Name = "Column12"
+        Me.Column12.ReadOnly = True
+        Me.Column12.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Column12.Width = 53
+        '
+        'Column11
+        '
+        Me.Column11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.Column11.FillWeight = 36.23189!
+        Me.Column11.HeaderText = "Total Amount"
+        Me.Column11.Name = "Column11"
+        Me.Column11.ReadOnly = True
+        Me.Column11.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Column11.Width = 80
+        '
+        'Column6
+        '
+        Me.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.Column6.HeaderText = "Sales Type"
+        Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
+        Me.Column6.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Column6.Width = 77
+        '
+        'Column5
+        '
+        Me.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.Column5.HeaderText = "Total Amount"
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        Me.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Column5.Width = 88
+        '
+        'Column4
+        '
+        Me.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.Column4.HeaderText = "Total Discount"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        Me.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Column4.Width = 92
+        '
+        'Column3
+        '
+        Me.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.Column3.HeaderText = "Unit Sold"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        Me.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Column3.Width = 70
+        '
+        'Column14
+        '
+        Me.Column14.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.Column14.HeaderText = "Product Name"
+        Me.Column14.MinimumWidth = 100
+        Me.Column14.Name = "Column14"
+        Me.Column14.ReadOnly = True
+        Me.Column14.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        '
+        'Column2
+        '
+        Me.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.Column2.HeaderText = "Product Code"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Column2.Width = 88
+        '
+        'Column13
+        '
+        Me.Column13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.Column13.HeaderText = "Transaction Date"
+        Me.Column13.MinimumWidth = 65
+        Me.Column13.Name = "Column13"
+        Me.Column13.ReadOnly = True
+        Me.Column13.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Column13.Width = 105
+        '
+        'Column1
+        '
+        Me.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.Column1.HeaderText = "Transaction #"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        Me.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Column1.Width = 90
         '
         'SubFormSales
         '
@@ -588,14 +603,14 @@ Partial Class SubFormSales
     Friend WithEvents Label9 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents TSCashRecievedTextBox As TextBox
+    Friend WithEvents Label12 As Label
+    Friend WithEvents TransDateSearchTextBox As TextBox
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
     Friend WithEvents Column9 As DataGridViewTextBoxColumn
     Friend WithEvents Column10 As DataGridViewTextBoxColumn
     Friend WithEvents Column12 As DataGridViewTextBoxColumn
     Friend WithEvents Column11 As DataGridViewTextBoxColumn
-    Friend WithEvents Label12 As Label
-    Friend WithEvents TransDateSearchTextBox As TextBox
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column13 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn

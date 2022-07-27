@@ -115,6 +115,7 @@ Partial Class LoginForm
         Me.cmbCredentials.Location = New System.Drawing.Point(138, 224)
         Me.cmbCredentials.Name = "cmbCredentials"
         Me.cmbCredentials.Size = New System.Drawing.Size(196, 36)
+        Me.cmbCredentials.StartIndex = 0
         Me.cmbCredentials.TabIndex = 0
         '
         'Label1

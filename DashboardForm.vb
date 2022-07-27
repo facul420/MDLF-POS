@@ -68,7 +68,8 @@ Public Class DashboardForm
         'InventorySecurityForm.Visible = True
         'AccountsSecurityForm.Visible = False
         'SalesSecurityForm.Visible = False
-        SubFormSecurity.Visible = True
+        'SubFormSecurity.Visible = True
+        OpenSubForm(New SubFormInventory)
         sales = False
         acc = False
     End Sub
@@ -79,7 +80,7 @@ Public Class DashboardForm
         'SalesSecurityForm.Visible = True
         'InventorySecurityForm.Visible = False
         'AccountsSecurityForm.Visible = False
-        SubFormSecurity.Visible = True
+        OpenSubForm(New SubFormSales)
         acc = False
         inv = False
     End Sub
@@ -90,7 +91,7 @@ Public Class DashboardForm
         'AccountsSecurityForm.Visible = True
         'SalesSecurityForm.Visible = False
         'InventorySecurityForm.Visible = False
-        SubFormSecurity.Visible = True
+        OpenSubForm(New SubFormAccounts)
         sales = False
         inv = False
     End Sub
@@ -184,7 +185,7 @@ Public Class DashboardForm
     End Sub
 
     Private Sub btnPOS_Click(sender As Object, e As EventArgs) Handles btnPOS.Click
-        POSSecurityForm.Visible = True
+        POSForm.Visible = True
 
         If currentSubForm IsNot Nothing Then
             currentSubForm.Close()

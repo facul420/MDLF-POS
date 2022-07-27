@@ -1102,6 +1102,7 @@ Partial Class POSForm
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "POSForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "n"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel3.ResumeLayout(False)

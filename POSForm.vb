@@ -332,11 +332,12 @@ Public Class POSForm
             If dgItems.RowCount > 0 Then
                 MsgBox("Please cancel the transaction first", MsgBoxStyle.Exclamation)
             Else
+                System.Windows.Forms.Cursor.Show()
                 Me.Close()
                 DashboardForm.Visible = True
                 System.Windows.Forms.Cursor.Show()
             End If
-            System.Windows.Forms.Cursor.Show()
+
         ElseIf e.KeyCode = Keys.F7 Then
             ProdCodeTextBox.Enabled = False
             OptionLabel1.Visible = True

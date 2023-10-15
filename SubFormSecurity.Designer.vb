@@ -92,7 +92,7 @@ Partial Class SubFormSecurity
         Me.Button1.Text = "LOGIN"
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'SecurityForm02
+        'SubFormSecurity
         '
         Me.AcceptButton = Me.Button1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -106,7 +106,7 @@ Partial Class SubFormSecurity
         Me.DoubleBuffered = True
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "SecurityForm02"
+        Me.Name = "SubFormSecurity"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "SecurityForm02"
         Me.ResumeLayout(False)

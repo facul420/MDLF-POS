@@ -358,6 +358,10 @@ Public Class SubFormAccounts
         End Try
     End Sub
 
+    Private Sub AccountsDataGrid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles AccountsDataGrid.CellContentClick
+
+    End Sub
+
 
 
 #End Region

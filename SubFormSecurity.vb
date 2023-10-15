@@ -81,5 +81,7 @@ Public Class SubFormSecurity
         txtUserName.Clear()
     End Sub
 
+    Private Sub SubFormSecurity_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
 End Class
